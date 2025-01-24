@@ -73,6 +73,14 @@ export const footerLinks = [
         link: "/packages/fleet",
       },
       {
+        name: "Financing",
+        link: "/financing",
+      },
+      {
+        name: "Insurance",
+        link: "https://www.avemco.com/products/renter?partner=LA16",
+      },
+      {
         name: "Gallery",
         link: "/packages/gallery",
       },

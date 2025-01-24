@@ -51,7 +51,7 @@ const multiEngineRating = {
             "To begin training, you must hold a valid Private Pilot License (PPL) or higher. Instrument proficiency is recommended to enhance your training experience, although it is not required.",
             "We also recommend having logged time in complex aircraft or higher-performance planes to familiarize yourself with advanced flight systems.",
           ],
-          imagePath: "/src/assets/N120B.jpg",
+          imagePath: "/src/assets/lafa-plane-beechcraft-twin-engine-outside-hangar.jpg",
           imageAlt: "Pilot reviewing logbook for multi-engine eligibility",
         },
         {

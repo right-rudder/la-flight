@@ -2,11 +2,11 @@ const advancedTrainings = {
   data: {
     slug: "advanced-trainings",
     // SEO Header Stuff
-    pageTitle: "ADVANCED FLIGHT TRAININGS | LA Flight Academy",
+    pageTitle: "ADVANCED FLIGHT TRAINING | LA Flight Academy",
     pageDescription:
-      "Enhance your aviation expertise with advanced flight trainings at LA Flight Academy. Gain proficiency in complex, high-performance, multi-engine, spin training, and more.",
+      "Enhance your aviation expertise with advanced flight training at LA Flight Academy. Gain proficiency in complex, high-performance, multi-engine, spin training, and more.",
     pageKeywords:
-      "Advanced flight trainings, complex aircraft training, multi-engine rating, high-performance training, spin training, advanced pilot certifications",
+      "Advanced flight training, complex aircraft training, multi-engine rating, high-performance training, spin training, advanced pilot certifications",
 
     // Top Header
     header: {
@@ -14,8 +14,8 @@ const advancedTrainings = {
       imagePath: "/src/assets/lafa-advanced-training.jpg",
       imageAlt:
         "Pilot undergoing advanced flight training in a complex aircraft",
-      headerH1: `Advanced <br>Trainings</span>`,
-      paragraph: `Refine your skills and elevate your proficiency with LA Flight Academy’s advanced trainings. Designed for licensed pilots, these programs cover specialized areas like multi-engine operations, spin recovery, and high-performance aircraft, ensuring you're prepared for every challenge in the skies.`,
+      headerH1: `Advanced <br>Training</span>`,
+      paragraph: `Refine your skills and elevate your proficiency with LA Flight Academy’s advanced training. Designed for licensed pilots, these programs cover specialized areas like multi-engine operations, spin recovery, and high-performance aircraft, ensuring you're prepared for every challenge in the skies.`,
       buttons: [
         {
           name: "Enroll Today",
@@ -31,29 +31,29 @@ const advancedTrainings = {
     },
 
     pageSummary: {
-      title: `Advanced Flight <br> Trainings`,
+      title: `Advanced Flight <br> Training`,
       paragraphs: [
-        "Our advanced trainings are tailored to pilots seeking to expand their knowledge and refine their expertise. Whether you aim to master multi-engine aircraft, tackle complex operations, or enhance spin recovery skills, we have a program for you.",
+        "Our advanced training courses are tailored to pilots seeking to expand their knowledge and refine their expertise. Whether you aim to master multi-engine aircraft, tackle complex operations, or enhance spin recovery skills, we have a program for you.",
         "These specialized trainings are ideal for building confidence, upgrading certifications, and preparing for more challenging roles in aviation.",
       ],
     },
 
     roadmap: {
       upperHeading: "Roadmap",
-      heading: "Advanced Trainings Overview",
+      heading: "Advanced Training Overview",
       descriptions: [
         "Each advanced training program is structured to provide an in-depth focus on specific areas of aviation expertise. From mastering high-performance aircraft to preparing for real-world flight challenges, our instructors are here to guide you every step of the way.",
       ],
       steps: [
         {
-          title: "Complex Aircraft Training",
+          title: "Aircraft Training",
           paragraphs: [
-            "Learn to operate complex aircraft equipped with retractable landing gear, constant-speed propellers, and advanced avionics. This training enhances your proficiency and prepares you for real-world flight operations.",
+            "Learn to operate aircraft equipped with retractable landing gear, constant-speed propellers, and advanced avionics. This training enhances your proficiency and prepares you for real-world flight operations.",
             "Hands-on sessions focus on systems management, emergency procedures, and efficient performance in a variety of scenarios.",
           ],
-          imagePath: "/src/assets/lafa-archer-blog-cover.jpg",
+          imagePath: "/src/assets/LAFA-CTA-bg.webp",
           imageAlt:
-            "Pilot training on a complex aircraft with retractable gear",
+            "Pilot training on an aircraft with retractable gear",
         },
         {
           title: "High-Performance Aircraft Training",
@@ -96,7 +96,7 @@ const advancedTrainings = {
         },
       ],
       finalParagraph:
-        "Whether you’re advancing your career or enhancing personal skills, LA Flight Academy’s advanced trainings provide the knowledge, experience, and confidence to excel. Join us to take your flying expertise to the next level.",
+        "Whether you’re advancing your career or enhancing personal skills, LA Flight Academy’s advanced training provide the knowledge, experience, and confidence to excel. Join us to take your flying expertise to the next level.",
       finalButton: {
         name: "Enroll Now",
         link: "/enroll-now",

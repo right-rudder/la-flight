@@ -19,7 +19,7 @@ const data500 = {
       imagePath:
         "/src/assets/crashed-plane-error-500.jpg",
       imageAlt: `${COMPANY_NAME} plane taking off`,
-      headerH1: `well, this is <div class="bg-gradient-to-br from-accent-500 via-accent-200 to-accent-400 bg-clip-text text-transparent">AWKWARD</div>`,
+      headerH1: `well, this is AWKWARD`,
       paragraph:
         `It appears the form you were trying to send crashed (better here then on the runway right? you're right we shouldn't joke about that, sorry). Please call us on ${PHONE_NUMBER} for your request, also please notify our staff of this error. <br>Now back to landing with you!`,
       buttons: [

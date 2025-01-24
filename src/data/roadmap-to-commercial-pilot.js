@@ -70,7 +70,7 @@ const Roadmap = {
               "Once you meet the ATP requirements, you can begin your career as a First Officer at a regional airline. This role provides hands-on experience in the airline environment, preparing you for future advancement to larger aircraft and major airlines.",
               "With continued training and experience, you’ll achieve your dream of flying for a commercial airline, paving the way for a rewarding aviation career."
           ],
-          imagePath: "/src/assets/rayyu-maldives-unsplash-airline-pilots.jpg",
+          imagePath: "/src/assets/lafa-plane-cessna-172s-propeller.jpg",
           imageAlt: "Airline pilot cockpit view, preparing for flight"
       }
   ],

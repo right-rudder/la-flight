@@ -16,6 +16,5 @@ export default defineConfig({
     '/our-instructors': '/packages/crew',
     '/team-showcase': '/packages/crew',
     '/service/certified-flight-instructor': '/programs/certified-flight-instructor',
-    "/team-showcase/[...slug]": "/packages/crew",
   }
 });

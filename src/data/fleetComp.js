@@ -10,7 +10,7 @@ const fleetCompData = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/fleet-top.jpg",
+      imagePath: "/src/assets/lafa-cessna-172s-being-pulled-from-main-hangar.jpg",
       imageAlt: "Three LA Flight Academy aircraft on the patio",
       headerH1: `Our <br><span>FLEET</span>`,
       paragraph: `LA Flight Academy’s fleet is meticulously maintained to provide a safe, modern, and reliable training environment. Explore our range of Cessna and Piper aircraft, ideal for both beginners and advanced pilots.`,
@@ -68,7 +68,7 @@ const fleetCompData = {
       rates: "($165hr/$155 block)",
       description:
         "This aircraft is ideal for Private Pilot, Commercial, CFI and Spin Training.",
-      image: "/src/assets/N76015.jpg",
+      image: "/src/assets/lafa-plane-cessna-76015-outside-hangar.jpg",
       details: [
         "1976 Cessna 172N",
         "160hp Carbureted",
@@ -100,17 +100,34 @@ const fleetCompData = {
       name: "N4313F",
       rates: "($175HR/$165 block)",
       description:
-        "This Piper Cherokee is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
+        "This Piper Archer II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
       image: "/src/assets/lafa-plane-piper-cherokee-outside-hangar.jpg",
       details: [
-        "1978 Piper Cherokee (P28A)",
-        "160hp — Piston-Single",
+        "1978 Piper Archer II PA28",
+        "180hp — Piston-Single",
         "Garmin GNS430 GPS",
         "Traditional Round-Gauge Panel",
         "Comfortable Four-Seat Configuration",
         "Time-Building and Private Pilot Training",
         "$175/hour (wet)",
         "$165/hour 10 hour block (wet)",
+      ],
+    },
+    {
+      name: "N8165R",
+      rates: "($165HR/$155 block)",
+      description:
+        "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
+      image: "/src/assets/lafa-plane-piper-warrior-ii-outside-hangar.jpg",
+      details: [
+        "1979 Piper Warrior II (PA28)",
+        "160hp — Piston-Single",
+        "Garmin GNS430 GPS",
+        "Traditional Round-Gauge Panel",
+        "Comfortable Four-Seat Configuration",
+        "Time-Building and Private Pilot Training",
+        "$165/hour (wet)",
+        "$155/hour 10 hour block (wet)",
       ],
     },
   ],

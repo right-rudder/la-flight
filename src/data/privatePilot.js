@@ -50,7 +50,7 @@ const privatePilotCourse = {
           paragraphs: [
             "To begin your Private Pilot training, you must meet basic FAA requirements, including being at least 17 years old, obtaining a third-class medical certificate, and demonstrating proficiency in English. At LA Flight Academy, we guide you through the process to ensure a smooth start.",
           ],
-          imagePath: "/src/assets/lafa-cfi-enrolling-new-student.jpg",
+          imagePath: "/src/assets/lafa-admin-cameron-diamond-enrolling-new-student-pilot.jpg",
           imageAlt: "LA Flight Academy CFI enrolling a new student",
         },
         {

@@ -1,7 +1,7 @@
 const pilotTrainingGuide = {
   data: {
     //SEO Header Stuff
-    pageTitle: "ASCENT to a Pilot Career | LA Flight Academy",
+    pageTitle: "Ascent to a Pilot Career | LA Flight Academy",
     pageDescription:
       "Follow LA Flight Academy’s step-by-step guide to becoming a professional pilot. From earning your Private Pilot License to landing a job with a commercial airline, discover the complete pathway to success in aviation.",
     pageKeywords:
@@ -10,9 +10,9 @@ const pilotTrainingGuide = {
     //top header
     header: {
       stars: true,
-      imagePath: "/src/assets/plane-taking-off-runway.jpg",
+      imagePath: "/src/assets/lafa-student-pilot-and-cfi-flying-plane-beechcraft-twin-engine-4.jpg",
       imageAlt:
-        "LA Flight Academy student pilot in training over scenic California",
+        "LA Flight Academy student pilot and CFI flying in a Beechcraft Twin Engine",
       headerH1: `PATHWAY TO <br>COMMERCIAL AIRLINE PILOT`,
       paragraph: `At LA Flight Academy, we’re here to guide you through every step of your journey to becoming a professional pilot, starting from your first flight to earning your ATP certificate.`,
       buttons: [

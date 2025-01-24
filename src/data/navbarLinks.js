@@ -84,7 +84,11 @@ export const navbarLinks = [
       },
       {
         name: "Financing",
-        link: "https://apply.stratus.finance/laflightacademy1303242",
+        link: "/financing",
+      },
+      {
+        name: "Insurance",
+        link: "https://www.avemco.com/products/renter?partner=LA16",
       },
       {
         name: "Gallery",

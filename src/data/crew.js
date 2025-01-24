@@ -11,8 +11,8 @@ const crew = {
 
     // Top Header
     header: {
-      imagePath: "/src/assets/lafa-crew-top.jpg",
-      imageAlt: "Aircraft inside LA Flight Academy hangar at Van Nuys Airport",
+      imagePath: "/src/assets/crew-top.png",
+      imageAlt: "LA Flight Academy CFIs",
       headerH1: `Experience</br><span>Excellence in Flight Training</span>`,
       paragraph:
         "Our team of experienced flight instructors and aviation professionals at LA Flight Academy is dedicated to providing world-class training. Learn more about our team and how they can help you soar to new heights in aviation.",
@@ -50,48 +50,48 @@ const crew = {
       members: [
         {
           name: `Alex Feldman<br><small class="text-white font-normal text-sm">Chief Pilot, CFI-I</small>`,
-          imagePath: "/src/assets/Alex-Feldman-Chief-Pilot.jpg",
-          imageAlt: "Alex Feldman, Chief Pilot and CFI-I of LA Flight Academy",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
+          imageAlt: "Alex Feldman, Chief Pilot, CFI-I, and MEI of LA Flight Academy",
         },
         {
           name: `Cameron Diamond<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI, MEI</small>`,
-          imagePath: "/src/assets/Cameron-Diamond-CFI.jpg",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-cameron-diamond.jpg",
           imageAlt: "Cameron Diamond, CFI at LA Flight Academy",
         },
         {
           name: `Parker Capp<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/Parker-Capp-CFI.jpg",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-parker-capp-2.jpg",
           imageAlt: "Parker Capp, CFI at LA Flight Academy",
         },
         {
           name: `Dror Waissengrin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/Dror-Waissengrin-CFI-I.jpg",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-dror-waissengrin-2.jpg",
           imageAlt: "Dror Waissengrin, CFI-I at LA Flight Academy",
         },
-        // {
-        //   name: `Roman Kozlenko<br><small class="text-white font-normal text-sm">CFI</small>`,
-        //   imagePath: "/src/assets/Roman-Kozlenko-CFI.jpg",
-        //   imageAlt: "Roman Kozlenko, CFI at LA Flight Academy",
-        // },
         {
           name: `Matthew Ronder-Seid<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/Matthew-Ronder-Seid-CFI.jpg",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-matthew-ronder-2.jpg",
           imageAlt: "Matthew Ronder-Seid, CFI at LA Flight Academy",
         },
         {
           name: `Jack Keshishian<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/profile-silhouette.png",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-jack-keshishian.jpg",
           imageAlt: "Jack Keshishian, CFI at LA Flight Academy",
         },
         {
           name: `Chris Ghazarian<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/profile-silhouette.png",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-chris-ghazarian.jpg",
           imageAlt: "Chris Ghazarian, CFI at LA Flight Academy",
         },
         {
           name: `Andre Dassin<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/profile-silhouette.png",
+          imagePath: "/src/assets/lafa-headshot-of-cfi-andre-dassin.jpg",
           imageAlt: "Andre Dassin, CFI at LA Flight Academy",
+        },
+        {
+          name: `Mason Morrow<br><small class="text-white font-normal text-sm">CFI</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-mason-morrow.jpg",
+          imageAlt: "Mason Morrow, CFI at LA Flight Academy",
         },
       ],
     },

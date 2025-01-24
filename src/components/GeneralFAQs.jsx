@@ -52,7 +52,7 @@ const GeneralFAQs = () => {
     {
       question: "Does LA Flight Academy offer financing options?",
       answer:
-        "Yes, we partner with Stratus Financial, Pilot Finance, and Avemco to provide financing options for students.",
+        "Yes, we partner with <a href='https://stratus.finance/apply/laflightacademy1303242/' target='_blank' class='hover:brightness-125 text-primary-600'>Stratus Financial</a> and <a href='https://www.flighttrainingfinancellc.com/' target='_blank' class='hover:brightness-125 text-primary-600'>Flight Training Finance</a>, to provide financing options for students. We also have a partnership with <a href='https://www.avemco.com/products/renter?partner=LA16' target='_blank' class='hover:brightness-125 text-primary-600'>Avemco</a> to offer insurance.",
     },
     {
       question: "Does LA Flight Academy offer job placement assistance?",
