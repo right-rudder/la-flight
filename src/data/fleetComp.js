@@ -32,7 +32,7 @@ const fleetCompData = {
       rates: "($380hr/$350 block)",
       description:
         "This 260hp fuel Injected aircraft is ideal for Commercial Multi-Engine and MEI Training.",
-      image: "/src/assets/lafa-plane-beechcraft-twin-engine-outside-hangar.jpg",
+      image: "/src/assets/N120B_new.jpg",
       details: [
         "1962 Beechcraft 95-A55 Twin Engine",
         "260hp per Engine — Fuel Injected",
@@ -50,7 +50,7 @@ const fleetCompData = {
       rates: "($185hr/$175 block)",
       description:
         "This 180HP fuel injected four seat aircraft is ideal for Instrument, Commercial and CFI training. Manufactured in 1999.",
-      image: "/src/assets/lafa-plane-cessna-172s-outside-hangar.jpg",
+      image: "/src/assets/N252SP_new.jpg",
       details: [
         "1999 Cessna 172S",
         "180hp — Fuel Injected",
@@ -68,7 +68,7 @@ const fleetCompData = {
       rates: "($165hr/$155 block)",
       description:
         "This aircraft is ideal for Private Pilot, Commercial, CFI and Spin Training.",
-      image: "/src/assets/lafa-plane-cessna-76015-outside-hangar.jpg",
+      image: "/src/assets/N76015_new.jpg",
       details: [
         "1976 Cessna 172N",
         "160hp Carbureted",
@@ -84,7 +84,7 @@ const fleetCompData = {
       rates: "($175hr/$165 block)",
       description:
         "This Piper Archer II PA28-181 is a four seat, 180HP, low wing aircraft that is ideal for Private Pilot, Instrument, Commercial and CFI Training.",
-      image: "/src/assets/lafa-plane-piper-archer-outside-hangar.jpg",
+      image: "/src/assets/N7901C_new.jpg",
       details: [
         "1975 Piper Archer II PA28-181",
         "180hp Carbureted",
@@ -101,7 +101,7 @@ const fleetCompData = {
       rates: "($175HR/$165 block)",
       description:
         "This Piper Archer II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
-      image: "/src/assets/lafa-plane-piper-cherokee-outside-hangar.jpg",
+      image: "/src/assets/N4313F_new.jpg",
       details: [
         "1978 Piper Archer II PA28-181",
         "180hp — Piston-Single",
@@ -118,7 +118,7 @@ const fleetCompData = {
       rates: "($165HR/$155 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      image: "/src/assets/lafa-plane-piper-warrior-ii-outside-hangar.jpg",
+      image: "/src/assets/N8156R_new.jpg",
       details: [
         "1979 Piper Warrior II PA28-161",
         "160hp — Piston-Single",
