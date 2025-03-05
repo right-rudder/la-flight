@@ -62,4 +62,4 @@ Flying is a blend of art and science, and understanding the magic of lift is jus
 
 If you're ready to explore the world of aviation and take your first steps toward becoming a pilot, LA Flight Academy is here to guide you on your journey. Take a look at our [programs](/programs) and let's defy gravity together!
 
-To learn more about how LAFA can help you achieve your aviation goals, visit their [website](/) and take the first step toward your pilot career today.
+To learn more about how LAFA can help you achieve your aviation goals, visit our [website](/) and take the first step toward your pilot career today.
