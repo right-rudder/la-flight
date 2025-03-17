@@ -79,7 +79,9 @@ const Navbar = ({ pathname }) => {
     <nav className="w-full h-0 sticky inset-0 z-50 font-serif">
       <div
         className={`${
-          navBar || openMobile ? "bg-primary-800" : "bg-gradient-to-b from-white/60 via-white/60 to-transparent pb-10"
+          navBar || openMobile
+            ? "bg-primary-800"
+            : "bg-gradient-to-b from-white/60 via-white/60 to-transparent pb-10"
         } duration-500`}
       >
         <div className="px-5 w-full max-w-8xl mx-auto top-0">
@@ -114,20 +116,20 @@ const Navbar = ({ pathname }) => {
                         <a
                           href={item.link}
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
-                          className={`${navBar || openMobile ? "text-white group-last:bg-primary-100 group-last:text-primary-900" : "text-primary-900 group-last:bg-primary-800 group-last:text-white"} group-last:block font-medium text-xl duration-300 hover:underline decoration-primary-600 decoration-4 underline-offset-[10px] border-primary whitespace-nowrap group-last:font-normal group-last:px-0 group-last:rounded-sm group-last:hover:bg-primary-500 group-last:hover:text-white group-last:hover:no-underline group-last:hover:border-primary-500`}
+                          className={`${navBar || openMobile ? "text-white group-last:bg-primary-100 group-last:text-primary-900" : "text-primary-900 group-last:bg-primary-800 group-last:text-white"} group-last:block font-medium text-lg duration-300 hover:underline decoration-primary-600 decoration-4 underline-offset-[10px] border-primary whitespace-nowrap group-last:font-normal group-last:px-0 group-last:rounded-sm group-last:hover:bg-primary-500 group-last:hover:text-white group-last:hover:no-underline group-last:hover:border-primary-500`}
                         >
                           <span className="relative font-medium block group-last:py-3 group-last:px-5">
                             {item.name}
                           </span>
                         </a>
                       ) : (
-                        <span className="font-medium cursor-default text-2xl duration-300 hover:underline decoration-primary-300 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
+                        <span className="font-medium cursor-default text-lg duration-300 hover:underline decoration-primary-300 decoration-4 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-16 bg-white border-b-4 border-white whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute top-16 bg-white border-b-4 border-gray-100 shadow-sm whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
