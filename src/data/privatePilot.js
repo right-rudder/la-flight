@@ -4,14 +4,15 @@ const privatePilotCourse = {
     // SEO Header Stuff
     pageTitle: "PRIVATE PILOT COURSE | LA Flight Academy",
     pageDescription:
-      "Begin your aviation journey with LA Flight Academy's Private Pilot Course. Train with experienced instructors at Van Nuys Airport and earn your Private Pilot License (PPL) to take your first step toward the skies.",
+      "Start your aviation journey in Los Angeles with LA Flight Academy's comprehensive Private Pilot Course. Located at Van Nuys Airport, our experienced instructors provide personalized training with a modern fleet to help you earn your PPL efficiently and confidently. Ideal for aspiring pilots in Southern California.",
     pageKeywords:
-      "Private Pilot Course, PPL training Los Angeles, learn to fly California, flight school Van Nuys, private pilot license, pilot training for beginners",
+      "Private Pilot Course, PPL training Los Angeles, learn to fly California, flight school Van Nuys, private pilot license, pilot training for beginners, Los Angeles flight lessons, Southern California flight school, best PPL training LA",
 
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/lafa-pilot-student-plane-piper-cherokee-ready-to-take-off.jpg",
+      imagePath:
+        "/src/assets/lafa-pilot-student-plane-piper-cherokee-ready-to-take-off.jpg",
       imageAlt:
         "LA Flight Academy student preparing for their first solo flight at Van Nuys Airport",
       headerH1: `Private <br>Pilot Course</span>`,
@@ -50,7 +51,8 @@ const privatePilotCourse = {
           paragraphs: [
             "To begin your Private Pilot training, you must meet basic FAA requirements, including being at least 17 years old, obtaining a third-class medical certificate, and demonstrating proficiency in English. At LA Flight Academy, we guide you through the process to ensure a smooth start.",
           ],
-          imagePath: "/src/assets/lafa-admin-cameron-diamond-enrolling-new-student-pilot.jpg",
+          imagePath:
+            "/src/assets/lafa-admin-cameron-diamond-enrolling-new-student-pilot.jpg",
           imageAlt: "LA Flight Academy CFI enrolling a new student",
         },
         {

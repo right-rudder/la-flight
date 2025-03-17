@@ -43,13 +43,21 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MV9ZQVKS');</script>
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    (j as HTMLScriptElement).async = true;
+    (j as HTMLScriptElement).src =
+      "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-MV9ZQVKS");
+</script>
 <!-- End Google Tag Manager -->
-  
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
@@ -86,93 +94,4 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
   gtag("js", new Date());
 
   gtag("config", "G-Y1BB7PDXQ4");
-</script>
-
-<!-- NEED TO UPDATE SCHEMA -->
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "LocalBusiness",
-    "name": "LA Flight Academy",
-    "description": "LA Flight Academy, located at Van Nuys Airport, offers personalized flight training with a well-maintained fleet. Whether you're pursuing aviation as a hobby or a career, our experienced instructors provide a safe, transparent, and enjoyable learning environment. Explore our programs and fleet options today.",
-    "keywords": "LA Flight Academy, Van Nuys flight school, how to become a pilot, flight school near Los Angeles, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot, flight training, pilot training, aviation school in California, Cessna 172 training, discovery flights Van Nuys, pilot school near me, flight training in Los Angeles, Burbank, Santa Monica, Glendale, Pasadena, Beverly Hills",
-    "image": "/LA-Flight-Academy-logo-blue.png",
-    "logo": "/LA-Flight-Academy-logo-blue.png",
-    "telephone": "(818) 636-3131",
-    "email": "fly@laflightacademy.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "7900 Balboa Blvd., Unit G6",
-      "addressLocality": "Van Nuys",
-      "addressRegion": "CA",
-      "addressCountry": "US",
-      "postalCode": "91406"
-    },
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 34.216462801810444,
-        "longitude": -118.50057594232919
-      },
-      "geoRadius": 9000
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "32"
-    },
-    "url": "https://laflightacademy.com/",
-    "priceRange": "$",
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 34.216462801810444,
-      "longitude": -118.50057594232919
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "21:00"
-      }
-    ],
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "serviceType": "Flight Instruction"
-      },
-      "priceCurrency": "USD",
-      "price": "Varies"
-    },
-    "identifier": [
-      {
-        "@type": "PropertyValue",
-        "name": "IATA Code",
-        "value": "VNY"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "ICAO Code",
-        "value": "KVNY"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Airport Code",
-        "value": "VNY"
-      }
-    ],
-    "hasMap": "https://maps.app.goo.gl/HMpiYABaAeTVrubEA"
-  }
 </script>

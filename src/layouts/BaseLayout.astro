@@ -1,19 +1,78 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS, OG_IMAGE } from "../consts";
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  KEYWORDS,
+  OG_IMAGE,
+  COMPANY_NAME,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+  GMAPS,
+} from "../consts";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/roboto-slab";
 import "@fontsource/bebas-neue";
 import "@fontsource-variable/quicksand";
 import "@fontsource-variable/tourney";
-import '@fontsource/zilla-slab';
+import "@fontsource/zilla-slab";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription, keywords, ogImage } = Astro.props;
 import Banner from "../components/Banner.astro";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
+// Create JSON-LD schema for the flight school
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: COMPANY_NAME,
+  description: siteDescription || SITE_DESCRIPTION,
+  "@id": new URL(Astro.url.pathname, Astro.site).href,
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  telephone: PHONE_NUMBER,
+  email: EMAIL_ADDRESS,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: ADDRESS_LINE_1,
+    addressLocality: "Van Nuys",
+    addressRegion: "CA",
+    postalCode: "91406",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 34.2012,
+    longitude: -118.4901,
+  },
+  sameAs: [
+    "https://www.facebook.com/p/LA-Flight-Academy-100064073860589/",
+    "https://www.instagram.com/laflightacademy/",
+    "https://www.yelp.com/biz/la-flight-academy-los-angeles",
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+  priceRange: "$$$",
+  image: [new URL("/LA-Flight-Academy-logo-blue.png", Astro.site).href],
+  keywords: keywords || KEYWORDS,
+};
 ---
 
 <!doctype html>
@@ -25,13 +84,23 @@ import 'aos/dist/aos.css';
       keywords={keywords || KEYWORDS}
       image={ogImage || OG_IMAGE}
     />
+    <!-- Add JSON-LD schema -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(schemaMarkup)}
+    />
   </head>
   <body class="font-sans2 bg-white">
     <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV9ZQVKS"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MV9ZQVKS"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     <!-- End Google Tag Manager (noscript) -->
-  
+
     <Banner />
     <Navbar pathname={pathname} client:load />
     <main>

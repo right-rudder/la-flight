@@ -7,8 +7,9 @@ import CTAFlight from "../../data/CTAFlight.js";
 import PageSummary from "../../components/PageSummary.astro";
 import programsSwiper from "../../data/programs";
 import TrainingRoadmap from "../../components/TrainingRoadmap.astro";
-
 import programs from "../../data/programsSlug";
+import { COMPANY_NAME, ADDRESS_LINE_1, ADDRESS_LINE_2 } from "../../consts";
+
 export function getStaticPaths() {
   return programs.map(({ data }) => {
     return {
@@ -21,6 +22,34 @@ export function getStaticPaths() {
 }
 
 const { data } = Astro.props;
+
+// Create course-specific schema markup
+const courseSchemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name:
+    data.pageSummary?.title?.replace(/<br>|\<.*?\>/g, " ").trim() ||
+    data.pageTitle,
+  description: data.pageDescription,
+  provider: {
+    "@type": "Organization",
+    name: COMPANY_NAME,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ADDRESS_LINE_1,
+      addressLocality: "Van Nuys",
+      addressRegion: "CA",
+      postalCode: "91406",
+      addressCountry: "US",
+    },
+  },
+  offers: {
+    "@type": "Offer",
+    category: "Flight Training",
+    availability: "https://schema.org/InStock",
+  },
+  keywords: data.pageKeywords,
+};
 ---
 
 <BaseLayout
@@ -28,10 +57,15 @@ const { data } = Astro.props;
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
 >
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(courseSchemaMarkup)}
+  />
+
   <!-- HEADER -->
   <HeaderScreen content={data.header} />
   <PageSummary content={data.pageSummary} />
-  <TrainingRoadmap content={data.roadmap}/>
+  <TrainingRoadmap content={data.roadmap} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={CTAFlight} />
   <script src="../../scripts/creativeSwiper.js"></script>
