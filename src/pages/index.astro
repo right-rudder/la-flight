@@ -18,7 +18,6 @@ import CTAQuiz from "../components/CTAQuiz.astro";
 import CTAQuizData from "../data/CTAQuiz";
 import GeneralFAQs from "../components/GeneralFAQs";
 
-
 const blogfeed = {
   upperHeading: "Our Blog",
   heading: "LA Flight Academy News",
@@ -36,6 +35,48 @@ const welcome = {
 };
 
 const { data } = homePage;
+
+// FAQ Schema for rich results
+const faqsData = [
+  {
+    question: "Where is LA Flight Academy located?",
+    answer:
+      "We're located at Van Nuys Airport in Los Angeles, CA, one of the busiest general aviation airports in the world.",
+  },
+  {
+    question: "What pilot training programs does LA Flight Academy offer?",
+    answer:
+      "We offer Private Pilot License (PPL), Instrument Rating (IR), Commercial Pilot License (CPL), Multi-Engine Rating (ME), Certified Flight Instructor (CFI, CFII, MEI), Airline Transport Pilot (ATP), Complex and high-performance aircraft training, and Spin training, BFRs, and IPCs.",
+  },
+  {
+    question: "Does LA Flight Academy offer accelerated training?",
+    answer:
+      "Yes! We specialize in accelerated multi-engine training, allowing students to complete their programs in as little as 1.5 weeks.",
+  },
+  {
+    question: "What is your checkride pass rate?",
+    answer:
+      "We're proud to maintain a 100% checkride pass rate, a testament to our experienced instructors and high-quality training standards.",
+  },
+  {
+    question: "What sets LA Flight Academy apart from other flight schools?",
+    answer:
+      "Affordable but premium-quality training, relationships with Designated Pilot Examiners (DPEs), personalized instruction, and a family-like environment that fosters camaraderie among students and instructors.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqsData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <BaseLayout
@@ -43,11 +84,14 @@ const { data } = homePage;
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
 >
+  <!-- Add FAQ schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <HomeHeader />
   <Welcome content={welcome} />
   <GridPrograms content={programs} />
   <CTAQuiz content={CTAQuizData} />
-  <FleetComp content={fleetCompData}/>
+  <FleetComp content={fleetCompData} />
   <section class="my-14">
     <div class="max-w-7xl mx-auto flex justify-center">
       <GeneralFAQs client:visible />

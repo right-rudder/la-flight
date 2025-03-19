@@ -4,9 +4,9 @@ const commercialPilot = {
     // SEO Header Stuff
     pageTitle: "COMMERCIAL PILOT | LA Flight Academy",
     pageDescription:
-      "Advance your aviation career with LA Flight Academy’s Commercial Pilot program. Gain the skills, experience, and qualifications needed to become a professional pilot.",
+      "Launch your professional aviation career in Los Angeles with LA Flight Academy's Commercial Pilot program. Our Van Nuys Airport-based training provides the advanced skills, complex aircraft experience, and industry connections you need to succeed as a professional pilot in Southern California and beyond.",
     pageKeywords:
-      "Commercial Pilot training Van Nuys, advanced pilot certification, professional aviation career, commercial pilot license, FAA CPL training",
+      "Commercial Pilot training Van Nuys, advanced pilot certification Los Angeles, professional aviation career California, commercial pilot license LA, FAA CPL training Southern California, career pilot program, become airline pilot Los Angeles",
 
     // Top Header
     header: {
