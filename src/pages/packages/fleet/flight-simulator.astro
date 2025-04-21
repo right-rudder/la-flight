@@ -3,13 +3,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeaderScreen from "../../../components/HeaderScreen.astro";
 import CTAColor from "../../../components/CTAColor.astro";
 import CTAFlight from "../../../data/CTAFlight.js";
-import FleetBody from "../../../components/FleetBody.astro";
 import ProgramSwiper from "../../../components/ProgramSwiper.astro";
 import programsSwiper from "../../../data/programs";
+import SimulatorDetails from "../../../components/SimulatorDetails.astro";
+import simulatorData from "../../../data/simulatorData.js";
 
-import fleetData from "../../../data/fleetComp.js";
-
-const { data } = fleetData;
+const { data } = simulatorData;
 
 ---
 <BaseLayout
@@ -19,7 +18,7 @@ const { data } = fleetData;
   >
   
   <HeaderScreen content ={data.header} />
-  <FleetBody content={fleetData} />
+  <SimulatorDetails />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={CTAFlight} />
   
