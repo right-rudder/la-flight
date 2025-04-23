@@ -7,6 +7,8 @@ import ProgramSwiper from "../../../components/ProgramSwiper.astro";
 import programsSwiper from "../../../data/programs";
 import SimulatorDetails from "../../../components/SimulatorDetails.astro";
 import simulatorData from "../../../data/simulatorData.js";
+import CTAQuiz from "../../../components/CTAQuiz.astro";
+import CTAQuizData from "../../../data/CTAQuiz";
 
 const { data } = simulatorData;
 
@@ -19,6 +21,9 @@ const { data } = simulatorData;
   
   <HeaderScreen content ={data.header} />
   <SimulatorDetails />
+
+  <div class="p-6"></div>
+  <CTAQuiz content={CTAQuizData} />
   <ProgramSwiper content={programsSwiper} />
   <CTAColor content={CTAFlight} />
   
