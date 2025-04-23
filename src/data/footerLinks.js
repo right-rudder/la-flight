@@ -12,7 +12,7 @@ export const footerLinks = [
       },
       {
         name: "Career Path",
-        link: "/path",
+        link: "/pilot-career-path",
       },
       {
         name: "Flight Training",
