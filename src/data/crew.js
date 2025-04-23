@@ -93,6 +93,11 @@ const crew = {
           imagePath: "/src/assets/lafa-headshot-of-cfi-mason-morrow.jpg",
           imageAlt: "Mason Morrow, CFI-I at LA Flight Academy",
         },
+        {
+          name: `Jade Jung<br><small class="text-white font-normal text-sm">CFI-I</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-jade-jung.jpg",
+          imageAlt: "Jade Jung, CFI-I at LA Flight Academy",
+        },
       ],
     },
   },

@@ -25,7 +25,7 @@ const privatePilotCourse = {
         },
         {
           name: "Learn More",
-          link: "/path",
+          link: "/pilot-career-path",
           primary: false,
         },
       ],

@@ -23,7 +23,7 @@ const coursesIndex = {
         },
         {
           name: "Program Guide",
-          link: "/path",
+          link: "/pilot-career-path",
           primary: false,
         },
       ],

@@ -24,7 +24,7 @@ const advancedTrainings = {
         },
         {
           name: "Training Guide",
-          link: "/path",
+          link: "/pilot-career-path",
           primary: false,
         },
       ],

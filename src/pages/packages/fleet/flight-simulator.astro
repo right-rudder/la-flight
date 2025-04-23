@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeaderScreen from "../../../components/HeaderScreen.astro";
+import CTAColor from "../../../components/CTAColor.astro";
+import CTAFlight from "../../../data/CTAFlight.js";
+import ProgramSwiper from "../../../components/ProgramSwiper.astro";
+import programsSwiper from "../../../data/programs";
+import SimulatorDetails from "../../../components/SimulatorDetails.astro";
+import simulatorData from "../../../data/simulatorData.js";
+import CTAQuiz from "../../../components/CTAQuiz.astro";
+import CTAQuizData from "../../../data/CTAQuiz";
+
+const { data } = simulatorData;
+
+---
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+  >
+  
+  <HeaderScreen content ={data.header} />
+  <SimulatorDetails />
+
+  <div class="p-6"></div>
+  <CTAQuiz content={CTAQuizData} />
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={CTAFlight} />
+  
+  <script src="../../../scripts/creativeSwiper.js"></script>
+</BaseLayout>

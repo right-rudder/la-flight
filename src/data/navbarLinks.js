@@ -7,7 +7,7 @@ export const navbarLinks = [
   },
   {
     name: "Career Path",
-    link: "/path",
+    link: "/pilot-career-path",
     mobileLink: true,
     submenu: [],
   },
@@ -64,8 +64,17 @@ export const navbarLinks = [
   {
     name: "Fleet",
     link: "/packages/fleet",
-    mobileLink: true,
-    submenu: [],
+    mobileLink: false,
+    submenu: [
+      {
+        name: "Aircraft",
+        link: "/packages/fleet",
+      },
+      {
+        name: "Simulator",
+        link: "/packages/fleet/flight-simulator",
+      },
+    ],
   },
   {
     name: "Instructors",
