@@ -7,7 +7,7 @@ export const navbarLinks = [
   },
   {
     name: "Career Path",
-    link: "/path",
+    link: "/pilot-career-path",
     mobileLink: true,
     submenu: [],
   },
