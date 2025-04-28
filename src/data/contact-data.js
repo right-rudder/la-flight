@@ -13,9 +13,9 @@ const contactPage = {
     //SEO Header Stuff
     pageTitle: `Contact us | ${COMPANY_NAME}`,
     pageDescription:
-      `Get in touch with ${COMPANY_NAME} for all your flight training, aircraft maintenance, and aviation service needs. Our team is ready to assist you with any questions and help guide you on your aviation journey. Contact us today to learn more or to book a service!`,
+      `Get in touch with ${COMPANY_NAME} for all your flight training and aviation service needs. Our team is ready to assist you with any questions and help guide you on your aviation journey. Contact us today to learn more or to book a service!`,
     pageKeywords:
-      `${KEYWORDS}, contact ${COMPANY_NAME}, flight training inquiries, aviation services, aircraft maintenance booking, los angeles, van nuys, venice,  aviation support, contact flight school, los angeles, van nuys, venice,  aviation maintenance`,
+      `${KEYWORDS}, contact ${COMPANY_NAME}, flight training inquiries, aviation services, aircraft booking, los angeles, van nuys, venice,  aviation support, contact flight school, los angeles, van nuys, venice`,
 
 
     header: {
@@ -25,7 +25,7 @@ const contactPage = {
       imageAlt: `${COMPANY_NAME} logo`,
       headerH1: `Contact</br>${COMPANY_NAME}`,
       paragraph:
-        `Whether you’re ready to start your flight training, schedule maintenance for your aircraft, or simply have questions about our programs, the team at ${COMPANY_NAME} is here to assist you.`,
+        `Whether you’re ready to start your flight training or simply have questions about our programs, the team at ${COMPANY_NAME} is here to assist you.`,
       buttons: [
         {
           name: "Enroll Form",
@@ -44,14 +44,14 @@ const contactPage = {
       form_url: import.meta.env.CONTACT_WEBHOOK_URL,
       redirect_url: "/enroll-confirmation",
       form_h: "Connect with Us",
-      form_p1: "For questions about flight training, scheduling a discovery flight, or booking maintenance services, our team is here to assist. At LA Flight Academy, we’re dedicated to providing personalized guidance and support throughout your aviation journey.",  
+      form_p1: "For questions about flight training or scheduling a discovery flight, our team is here to assist. At LA Flight Academy, we’re dedicated to providing personalized guidance and support throughout your aviation journey.",  
       form_p2: "Located at Van Nuys Airport, we’re proud to serve aspiring pilots and aviation enthusiasts from across the region. Fill out the contact form, and one of our team members will get in touch soon to answer your questions or help with your booking.",  
       address_1: ADDRESS_LINE_1,
       address_2: ADDRESS_LINE_2,
       gmaps: GMAPS,
       phone_num: PHONE_NUMBER,
       email: EMAIL_ADDRESS,
-      // label: "Which maintenance service are you interested in?",
+      // label: "Which service are you interested in?",
       // options: [
       //   "Oil Change",
       //   "Annual Inspection",
