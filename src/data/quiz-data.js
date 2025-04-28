@@ -25,7 +25,7 @@ const quizPage = {
       imageAlt: `${COMPANY_NAME} logo`,
       headerH1: `Quiz</br>${COMPANY_NAME}`,
       paragraph:
-        `Whether you’re ready to start your flight training, schedule maintenance for your aircraft, or simply have questions about our programs, the team at ${COMPANY_NAME} is here to assist you.`,
+        `Whether you’re ready to start your flight training or simply have questions about our programs, the team at ${COMPANY_NAME} is here to assist you.`,
       buttons: [
         {
           name: "Enroll Form",
