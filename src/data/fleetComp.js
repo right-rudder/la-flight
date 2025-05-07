@@ -130,6 +130,23 @@ const fleetCompData = {
         "$155/hour 10 hour block (wet)",
       ],
     },
+    {
+      name: "N42982",
+      rates: "($185HR/$175 block)",
+      description:
+        "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
+      image: "/src/assets/N42982-piper-archer.webp",
+      details: [
+        "1983 Piper Archer II",
+        "Garmin 650 and Garmin 355 GPS with Dual G5s",
+        "3 Axis Autopilot",
+        "Technically Advanced Aircraft",
+        "IFR Equipped",
+        "Time-Building and Private Pilot Training",
+        "$185/hour (wet)",
+        "$175/hour 10 hour block (wet)",
+      ],
+    },
   ],
   buttons: [
     {
