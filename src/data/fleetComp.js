@@ -135,7 +135,7 @@ const fleetCompData = {
       rates: "($185HR/$175 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      image: "/src/assets/N42982-piper-archer.png",
+      image: "/src/assets/N42982-piper-archer.webp",
       details: [
         "1983 Piper Archer II",
         "Garmin 650 and Garmin 355 GPS with Dual G5s",
