@@ -1,30 +1,43 @@
 ---
 const { content } = Astro.props;
 
-const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_URL;
+const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env
+  .DISCOVERY_FLIGHT_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <section class="relative isolate bg-white py-0">
   <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-    <div
-      class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
-    >
+    <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
         <h2 class="text-5xl font-bold tracking-tight text-gray-900">
           Experience a Discovery Flight with LA Flight Academy
         </h2>
         <p class="mt-12 text-lg leading-8 text-gray-600">
-          Ready to take your first step into aviation? A Discovery Flight with LA Flight Academy is the perfect introduction to the world of flying. From the moment you take control of the aircraft, you'll understand why aviation captivates so many.
+          Ready to take your first step into aviation? A Discovery Flight with
+          LA Flight Academy is the perfect introduction to the world of flying.
+          From the moment you take control of the aircraft, you'll understand
+          why aviation captivates so many.
         </p>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Enjoy a hands-on flight lesson with one of our experienced FAA-certified instructors. This includes a pre-flight briefing, 30-40 minutes of flight time, and the chance to log the time towards your pilot certificate.        </p>
-        <p class="mt-2 text-lg leading-8 text-gray-600">
-          Located at Van Nuys Airport, your flight will showcase breathtaking views of the Los Angeles area, from the scenic Pacific Coast to iconic landmarks. Whether for recreation or to kickstart your aviation career, this is the ultimate first step.
+          Enjoy a hands-on flight lesson with one of our experienced
+          FAA-certified instructors. This includes a pre-flight briefing, 30-40
+          minutes of flight time, and the chance to log the time towards your
+          pilot certificate.
         </p>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Don’t wait—start your journey today and see the skies from a pilot’s perspective.
+          Located at Van Nuys Airport, your flight will showcase breathtaking
+          views of the Los Angeles area, from the scenic Pacific Coast to iconic
+          landmarks. Whether for recreation or to kickstart your aviation
+          career, this is the ultimate first step.
         </p>
-        <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600 font-sans2">
+        <p class="mt-2 text-lg leading-8 text-gray-600">
+          Don’t wait—start your journey today and see the skies from a pilot’s
+          perspective.
+        </p>
+        <dl
+          class="mt-10 space-y-4 text-base leading-7 text-gray-600 font-sans2"
+        >
           <div class="flex gap-x-4">
             <dt class="flex-none">
               <span class="sr-only">Address</span>
@@ -66,7 +79,12 @@ const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_UR
               </svg>
             </dt>
             <dd>
-              <a aria-labelledby="Call Us Now" title="Call Us Now" class="hover:text-gray-900" href={`tel:${content.phone_num}`}>
+              <a
+                aria-labelledby="Call Us Now"
+                title="Call Us Now"
+                class="hover:text-gray-900"
+                href={`tel:${content.phone_num}`}
+              >
                 {content.phone_num}
               </a>
             </dd>
@@ -130,9 +148,7 @@ const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_UR
             />
           </div>
           <div class="mb-4">
-            <label for="phone" class="block mb-0 font-semibold">
-              Phone
-            </label>
+            <label for="phone" class="block mb-0 font-semibold"> Phone </label>
             <input
               type="text"
               id="phone"
@@ -143,9 +159,7 @@ const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_UR
             />
           </div>
           <div class="mb-4">
-            <label for="email" class="block mb-0 font-semibold">
-              Email
-            </label>
+            <label for="email" class="block mb-0 font-semibold"> Email </label>
             <input
               type="email"
               id="email"
@@ -208,7 +222,8 @@ const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_UR
             for="agree-data-collection"
             class="text-gray-800 text-sm lg:text-base font-sans2"
           >
-            I agree to the collection and processing of my data in accordance with the privacy policy.
+            I agree to the collection and processing of my data in accordance
+            with the privacy policy.
           </label>
         </div>
         <button
@@ -224,83 +239,91 @@ const DISCOVERY_FLIGHT_WEBHOOK_URL = import.meta.env.DISCOVERY_FLIGHT_WEBHOOK_UR
     </div>
   </div>
 </section>
-<script define:vars={{ DISCOVERY_FLIGHT_WEBHOOK_URL }}>
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
+<script define:vars={{ DISCOVERY_FLIGHT_WEBHOOK_URL, PORTAL_API_KEY }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
 
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400"
-      );
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400"
-      );
-    }
-  });
-
-  // Wait for the DOM data to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
-    const contactForm = document.getElementById("contact-form");
-
-    // Check if the contactUs form element exists
-    if (contactForm !== null) {
-      // Add submit event listener to the contactUs form
-      contactForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
-        event.preventDefault();
-
-        // Serialize the form data
-        const formData = new FormData(contactForm);
-
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          contactForm.action = DISCOVERY_FLIGHT_WEBHOOK_URL;
-        }
-
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", contactForm.action);
-        xhr.setRequestHeader(
-          "data-Type",
-          "application/x-www-form-urlencoded"
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
         );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = "/enroll-confirmation";
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
-          }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Enroll form element not found.");
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      }
+    });
+    const form = document.getElementById("contact-form");
+    if (!form) {
+      console.error("Form element not found.");
+      return;
     }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const confirmEmail = formData.get("confirm-email")?.trim();
+
+      if (confirmEmail) return;
+
+      const webhookURL = DISCOVERY_FLIGHT_WEBHOOK_URL;
+      const apiKey = PORTAL_API_KEY;
+
+      const urlEncodedBody = new URLSearchParams(formData).toString();
+
+      const jsonBody = {
+        first_name: formData.get("first-name")?.trim() || "",
+        last_name: formData.get("last-name")?.trim() || "",
+        email: formData.get("email")?.trim() || "",
+        phone: formData.get("phone")?.trim() || "",
+        campaign: "discovery_flight",
+        account_random_id: "ac_50pud44m",
+        metadata: {
+          interest_program: formData.get("interest-program")?.trim() || "",
+          discovery_route: formData.get("discovery-route")?.trim() || "",
+        },
+      };
+
+      try {
+        const [ghlRes, portalRes] = await Promise.all([
+          fetch(webhookURL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: urlEncodedBody,
+          }),
+          fetch("https://portal.rightruddermarketing.com/api/leads", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "x-api-key": apiKey,
+            },
+            body: JSON.stringify(jsonBody),
+          }),
+        ]);
+
+        if (ghlRes.ok && portalRes.ok) {
+          window.location.href = "/enroll-confirmation";
+        } else {
+          console.error("Submission failed", {
+            ghlStatus: ghlRes.status,
+            portalStatus: portalRes.status,
+          });
+        }
+      } catch (err) {
+        console.error("Submission error:", err);
+      }
+    });
   });
 </script>
-

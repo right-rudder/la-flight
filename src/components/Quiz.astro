@@ -4,7 +4,7 @@ const { content } = Astro.props;
 const FORM_WEBHOOK_URL = content.form_url;
 
 const REDIRECT_URL = content.redirect_url;
-
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <section class="relative isolate bg-white">
@@ -279,137 +279,147 @@ const REDIRECT_URL = content.redirect_url;
   </div>
 </section>
 
-<script define:vars={{ FORM_WEBHOOK_URL }}>
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
+<script define:vars={{ FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
 
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400"
-      );
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400"
-      );
-    }
-  });
-
-  // Wait for the DOM data to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
-    const contactForm = document.getElementById("contact-form");
-
-    // Check if the contactUs form element exists
-    if (contactForm !== null) {
-      // Add submit event listener to the contactUs form
-      contactForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
-        event.preventDefault();
-
-        // Serialize the form data
-        const formData = new FormData(contactForm);
-
-        // Collect and count the quiz answers
-        const counts = { A: 0, B: 0, C: 0, D: 0 }; // Count for each category
-        const answerValues = { A: [], B: [], C: [], D: [] }; // Stores answers for each category
-
-        // Iterate through all form entries
-        for (const [key, value] of formData.entries()) {
-          if (value.includes("freedom to explore") || value.includes("Navigate a solo flight")) {
-            counts.A++;
-            answerValues.A.push(value);
-          }
-          if (value.includes("technical challenges") || value.includes("Study thoroughly")) {
-            counts.B++;
-            answerValues.B.push(value);
-          }
-          if (value.includes("Helping others") || value.includes("Becoming an instructor")) {
-            counts.C++;
-            answerValues.C.push(value);
-          }
-          if (value.includes("thrill of adventure") || value.includes("Flying alongside")) {
-            counts.D++;
-            answerValues.D.push(value);
-          }
-        }
-
-
-        // Log counts for debugging
-        console.log("Counts:", counts);
-
-        // Determine the answer with the highest count
-        const highestScore = Object.entries(counts).reduce((highest, current) => {
-          return current[1] > highest[1] ? current : highest;
-        }, ["", 0]);
-
-        console.log("Highest Score:", highestScore);
-
-        // Determine the personality type
-        const personalityMap = {
-          A: `Sky’s the Limit!<br>You’re a natural adventurer with the spirit of a pilot. You’re ready to take on the skies and embrace the thrill of flying. Let’s get you started on your journey!`,
-          B: `The Perfectionist Pilot<br>You have the precision and discipline required for aviation. Your attention to detail will make you a safe and reliable pilot. The cockpit is calling your name!`,
-          C: `The Team Player<br>You thrive on communication and collaboration. Whether as a commercial pilot or instructor, you’re destined to soar high while helping others reach their goals.`,
-          D: `The Passionate Learner<br>Your curiosity and determination to learn make you a great candidate for flight training. Let’s channel that passion into becoming a skilled aviator!`
-        };
-
-        document.getElementById("quizResult").value = personalityMap[highestScore[0]];
-        console.log("Quiz Result:", document.getElementById("quizResult").value);
-
-        const resultPage = {
-          A: `/quiz/sky`,
-          B: `/quiz/perfectionist`,
-          C: `/quiz/team-player`,
-          D: `/quiz/learner`
-        }
-
-        const redirectPage = resultPage[highestScore[0]] || "/404";   // Display the result
-
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          contactForm.action = FORM_WEBHOOK_URL;
-        }
-
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", contactForm.action);
-        xhr.setRequestHeader(
-          "data-Type",
-          "application/x-www-form-urlencoded"
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
         );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = redirectPage;
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
-          }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Enroll form element not found.");
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+        );
+      }
+    });
+    const form = document.getElementById("contact-form");
+    if (!form) {
+      console.error("Form element not found.");
+      return;
     }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+            // Collect and count the quiz answers
+      const counts = { A: 0, B: 0, C: 0, D: 0 }; // Count for each category
+      const answerValues = { A: [], B: [], C: [], D: [] }; // Stores answers for each category
+
+      // Iterate through all form entries
+      for (const [key, value] of formData.entries()) {
+        if (value.includes("freedom to explore") || value.includes("Navigate a solo flight")) {
+          counts.A++;
+          answerValues.A.push(value);
+        }
+        if (value.includes("technical challenges") || value.includes("Study thoroughly")) {
+          counts.B++;
+          answerValues.B.push(value);
+        }
+        if (value.includes("Helping others") || value.includes("Becoming an instructor")) {
+          counts.C++;
+          answerValues.C.push(value);
+        }
+        if (value.includes("thrill of adventure") || value.includes("Flying alongside")) {
+          counts.D++;
+          answerValues.D.push(value);
+        }
+      }
+
+
+      // Log counts for debugging
+      console.log("Counts:", counts);
+
+      // Determine the answer with the highest count
+      const highestScore = Object.entries(counts).reduce((highest, current) => {
+        return current[1] > highest[1] ? current : highest;
+      }, ["", 0]);
+
+      console.log("Highest Score:", highestScore);
+
+      // Determine the personality type
+      const personalityMap = {
+        A: `Sky’s the Limit!<br>You’re a natural adventurer with the spirit of a pilot. You’re ready to take on the skies and embrace the thrill of flying. Let’s get you started on your journey!`,
+        B: `The Perfectionist Pilot<br>You have the precision and discipline required for aviation. Your attention to detail will make you a safe and reliable pilot. The cockpit is calling your name!`,
+        C: `The Team Player<br>You thrive on communication and collaboration. Whether as a commercial pilot or instructor, you’re destined to soar high while helping others reach their goals.`,
+        D: `The Passionate Learner<br>Your curiosity and determination to learn make you a great candidate for flight training. Let’s channel that passion into becoming a skilled aviator!`
+      };
+
+      document.getElementById("quizResult").value = personalityMap[highestScore[0]];
+      console.log("Quiz Result:", document.getElementById("quizResult").value);
+
+      const resultPage = {
+        A: `/quiz/sky`,
+        B: `/quiz/perfectionist`,
+        C: `/quiz/team-player`,
+        D: `/quiz/learner`
+      }
+
+      const redirectPage = resultPage[highestScore[0]] || "/404";   // Display the result
+
+
+      const confirmEmail = formData.get("confirm-email")?.trim();
+
+      if (confirmEmail) return;
+
+      const webhookURL = FORM_WEBHOOK_URL;
+      const apiKey = PORTAL_API_KEY;
+
+      const urlEncodedBody = new URLSearchParams(formData).toString();
+
+      const jsonBody = {
+        first_name: formData.get("first-name")?.trim() || "",
+        last_name: formData.get("last-name")?.trim() || "",
+        email: formData.get("email")?.trim() || "",
+        phone: formData.get("phone")?.trim() || "",
+        campaign: "quiz",
+        account_random_id: "ac_50pud44m",
+        metadata: {
+          quizResult: document.getElementById("quizResult").value,
+        },
+      };
+
+      try {
+        const [ghlRes, portalRes] = await Promise.all([
+          fetch(webhookURL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: urlEncodedBody,
+          }),
+          fetch("https://portal.rightruddermarketing.com/api/leads", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "x-api-key": apiKey,
+            },
+            body: JSON.stringify(jsonBody),
+          }),
+        ]);
+
+        if (ghlRes.ok && portalRes.ok) {
+          window.location.href = redirectPage;
+        } else {
+          console.error("Submission failed", {
+            ghlStatus: ghlRes.status,
+            portalStatus: portalRes.status,
+          });
+        }
+      } catch (err) {
+        console.error("Submission error:", err);
+      }
+    });
   });
 </script>
