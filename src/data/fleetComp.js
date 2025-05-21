@@ -28,6 +28,24 @@ const fleetCompData = {
   header: `Our Fleet`,
   fleet: [
     {
+      name: "N219EL",
+      rates: "($275hr/$255 block)",
+      description:
+        "This 200hp Technically Advanced Aircraft (TAA) is ideal for Commercial, Instrument, and TAA time-building requirements.",
+      image: "/src/assets/Cirrus-219EL-(1-of-1)-8.jpeg", // Update this path if the image file differs
+      details: [
+        "2007 Cirrus SR20 GTS",
+        "200 horsepower",
+        "Avidyne Primary Flight Display (PFD) with Dual Garmin 430 GPS",
+        "Autopilot",
+        "IFR Certified",
+        "Technically Advanced Aircraft (TAA)",
+        "Ideal for Instrument, Commercial, and TAA time building",
+        "$275/hour (wet)",
+        "$255/hour 10 hour block (wet)",
+      ],
+    },
+    {
       name: "N120B",
       rates: "($380hr/$350 block)",
       description:
