@@ -85,7 +85,7 @@ const privatePilotCourse = {
           paragraphs: [
             "Prepare for cross-country and night flying with structured lessons designed to build confidence and proficiency. Navigate to unfamiliar airports, communicate with ATC, and operate safely in low-visibility conditions.",
           ],
-          imagePath: "/src/assets/lafa-plane-over-mountains.jpg",
+          imagePath: "/src/assets/lafa-plane-cessna-172s-flying-over-california-9.jpg",
           imageAlt:
             "LA Flight Academy aircraft on a cross-country training flight",
         },
