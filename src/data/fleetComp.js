@@ -10,7 +10,7 @@ const fleetCompData = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/lafa-plane-piper-archer-inside-hangar-bw.webp",
+      imagePath: "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
       imageAlt: "Three LA Flight Academy aircraft on the patio",
       headerH1: `Our <br><span>FLEET</span>`,
       paragraph: `LA Flight Academy’s fleet is meticulously maintained to provide a safe, modern, and reliable training environment. Explore our range of Cessna and Piper aircraft, ideal for both beginners and advanced pilots.`,
@@ -27,6 +27,24 @@ const fleetCompData = {
   imageAlt: "Inside of an LA Flight Academy aircraft on the runway",
   header: `Our Fleet`,
   fleet: [
+    {
+      name: "N219EL",
+      rates: "($275hr/$255 block)",
+      description:
+        "This 200hp Technically Advanced Aircraft (TAA) is ideal for Commercial, Instrument, and TAA time-building requirements.",
+      image: "/src/assets/Cirrus-219EL-fleet-pic.jpg",
+      details: [
+        "2007 Cirrus SR20 GTS",
+        "200 horsepower",
+        "Avidyne Primary Flight Display (PFD) with Dual Garmin 430 GPS",
+        "Autopilot",
+        "IFR Certified",
+        "Technically Advanced Aircraft (TAA)",
+        "Ideal for Instrument, Commercial, and TAA time building",
+        "$275/hour (wet)",
+        "$255/hour 10 hour block (wet)",
+      ],
+    },
     {
       name: "N120B",
       rates: "($380hr/$350 block)",
@@ -145,24 +163,6 @@ const fleetCompData = {
         "Time-Building and Private Pilot Training",
         "$185/hour (wet)",
         "$175/hour 10 hour block (wet)",
-      ],
-    },
-    {
-      name: "N219EL",
-      rates: "($275hr/$255 block)",
-      description:
-        "This 200hp Technically Advanced Aircraft (TAA) is ideal for Commercial, Instrument, and TAA time-building requirements.",
-      image: "/src/assets/Cirrus-219EL-(1-of-1)-8.jpeg", // Update this path if the image file differs
-      details: [
-        "2007 Cirrus SR20 GTS",
-        "200 horsepower",
-        "Avidyne Primary Flight Display (PFD) with Dual Garmin 430 GPS",
-        "Autopilot",
-        "IFR Certified",
-        "Technically Advanced Aircraft (TAA)",
-        "Ideal for Instrument, Commercial, and TAA time building",
-        "$275/hour (wet)",
-        "$255/hour 10 hour block (wet)",
       ],
     },
   ],
