@@ -3,9 +3,9 @@ const fleetCompData = {
     // SEO Header Stuff
     pageTitle: "Fleet | LA Flight Academy",
     pageDescription:
-      "Discover LA Flight Academy’s well-maintained fleet of aircraft, including Cessna and Piper models equipped with advanced avionics like Garmin G1000 and Dual G5 systems. Designed to support student pilots and advanced certifications with reliability and safety.",
+      "Explore LA Flight Academy’s diverse fleet of training aircraft and our FAA-approved Gleim BATD flight simulator. From Cessna and Piper to Cirrus and Beechcraft multi-engine, our fleet is designed for private pilot, instrument, commercial, CFI, and MEI training in Van Nuys, California.",
     pageKeywords:
-      "flight school fleet Van Nuys, Cessna training aircraft, Piper training planes, Garmin G1000 aircraft California, IFR training fleet, aviation school planes",
+      "flight school fleet Van Nuys, Cirrus SR20 training, Beechcraft multi-engine training, Piper Archer, Cessna 172, FAA-approved simulator California, TAA training aircraft, instrument training planes, IFR-certified aircraft, Gleim BATD simulator",
 
     // Top Header
     header: {
@@ -13,7 +13,7 @@ const fleetCompData = {
       imagePath: "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
       imageAlt: "Three LA Flight Academy aircraft on the patio",
       headerH1: `Our <br><span>FLEET</span>`,
-      paragraph: `LA Flight Academy’s fleet is meticulously maintained to provide a safe, modern, and reliable training environment. Explore our range of Cessna and Piper aircraft, ideal for both beginners and advanced pilots.`,
+      paragraph: `Our aircraft and simulator are carefully selected and professionally maintained to support every stage of your flight training journey. From Piper Warriors and Cessna 172s to a Cirrus SR20 GTS, Beechcraft multi-engine, and our FAA-approved Gleim BATD simulator, LA Flight Academy offers the tools and technology to help you train efficiently and safely.`,
       buttons: [
         {
           name: "Enroll Today",
@@ -165,6 +165,25 @@ const fleetCompData = {
         "Time-Building and Private Pilot Training",
         "$165/hour (wet)",
         "$155/hour 10 hour block (wet)",
+      ],
+    },
+    {
+      name: "Gleim BATD Simulator",
+      rates: "($70hr/$60 block)",
+      description:
+        "Our FAA-approved Basic Aviation Training Device (BATD) is perfect for Private Pilot, Instrument Rating, and IFR Currency training — all at an affordable rate.",
+      image: "/src/assets/lafa-gleim-batd-simulator-Sim-9.jpg", // Update this path to your actual image
+      details: [
+        "Gleim BATD Flight Simulator",
+        "FAA-Approved Basic Aviation Training Device (BATD)",
+        "Supports yoke, rudder, throttle, and full avionics stack",
+        "Ideal for structured ground-based flight training",
+        "Log up to 2.5 hours toward Private Pilot (14 CFR §61.109(k)(1))",
+        "Log up to 10 hours toward Instrument Rating (14 CFR §61.65(i))",
+        "Maintain IFR Currency (14 CFR §61.57(c))",
+        "Located on-site at LA Flight Academy in Van Nuys",
+        "$70/hour",
+        "$60/hour 10 hour block",
       ],
     },
   ],
