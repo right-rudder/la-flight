@@ -14,7 +14,7 @@ const programs = {
     },
     {
       title: "Instrument Rating",
-      imagePath: "/src/assets/LAFA-IR-cover.jpg",
+      imagePath: "/src/assets/lafa-cirrus-plane-fleet-avionics-instrument-rating.jpg",
       imageAlt: "Close-up of LAFA aircraft instruments",
       description:
         "Enhance your skills and safely navigate through low-visibility conditions with our Instrument Rating course.",
