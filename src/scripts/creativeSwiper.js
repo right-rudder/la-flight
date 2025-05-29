@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".creativeSwiper", {
+  // Existing Program Swiper
+  new Swiper(".creativeSwiper", {
     watchSlidesProgress: true,
-    slidesPerView: 3,
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
@@ -44,5 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
     effect: "slide",
+  });
+
+  // NEW: One Swiper per Fleet Card
+  document.querySelectorAll(".fleet-swiper").forEach((el) => {
+    new Swiper(el, {
+      modules: [Navigation],
+      loop: true,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: el.querySelector(".swiper-button-next"),
+        prevEl: el.querySelector(".swiper-button-prev"),
+      },
+    });
   });
 });
