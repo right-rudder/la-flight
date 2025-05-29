@@ -18,7 +18,7 @@ const { content } = Astro.props;
         content.fleet.map((plane) => (
           <FleetCard
             name={plane.name}
-            imagePath={plane.image}
+            images={plane.images}
             rates={plane.rates}
             description={plane.description}
             details={plane.details}
