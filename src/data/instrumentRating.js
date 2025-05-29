@@ -11,7 +11,7 @@ const instrumentRating = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/LAFA-IR-cover.jpg",
+      imagePath: "/src/assets/Cirrus-219EL-instrument-rating.jpg",
       imageAlt:
         "LA Flight Academy student learning IFR flying in a Cessna cockpit",
       headerH1: `Instrument <br>Rating </span>`,
