@@ -1,35 +1,40 @@
 ---
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
-const { name, imagePath, rates, description, details } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>(
+const { name, images, rates, description, details } = Astro.props;
+
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
-if (!images[imagePath]) {
-  throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
-  );
-}
 ---
 
 <div
-  class="flex group flex-col lg:flex-row items-center lg:items-start bg-white/80 rounded-lg shadow-md ring-1 ring-gray-100 overflow-hidden"
-  data-aos="fade up"
+  class="flex group flex-col lg:flex-row items-center lg:items-start bg-white/80 rounded-lg shadow-md ring-1 ring-gray-100 overflow-hidden h-auto min-h-max lg:h-[30rem]"
+  data-aos="fade-up"
 >
-  <!-- Image Section -->
-  <div class="lg:w-1/2 w-full overflow-hidden">
-    <Image
-      src={images[imagePath]()}
-      alt={name}
-      widths={[240, 540, 720, 1080, 1440, 1980]}
-      sizes={`(max-width: 300px) 240px, (max-width: 660px) 540px, (max-width: 900px) 720px, (max-width: 1200px) 1080px, (max-width: 1800px) 1440px, 1920px`}
-      class="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-300"
-    />
+  <!-- Image Carousel (fixed height on lg) -->
+  <div class="lg:w-1/2 w-full h-64 lg:h-full relative">
+    <div class="swiper fleet-swiper h-full">
+      <div class="swiper-wrapper h-full">
+        {images.map((imgPath) => (
+          <div class="swiper-slide h-full">
+            <Image
+              src={allImages[imgPath]()}
+              alt={`${name} photo`}
+              widths={[540, 720, 1080, 1440]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      <!-- Arrows inside image -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
-  <!-- Details Section -->
-  <div
-    class="lg:w-1/2 w-full flex flex-col justify-center align-middle items-center lg:items-start p-6"
-  >
+
+  <!-- Details -->
+  <div class="lg:w-1/2 w-full flex flex-col justify-center p-6 h-auto lg:h-full">
     <h3 class="text-4xl font-serif font-semibold text-gray-800">{name}</h3>
     <p class="text-gray-500 text-sm mb-4">{rates}</p>
     <ul class="list-disc list-inside space-y-2">
