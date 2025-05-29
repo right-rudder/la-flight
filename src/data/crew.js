@@ -59,9 +59,9 @@ const crew = {
           imageAlt: "Cameron Diamond, Asst Chief Pilot, CFI-I, MEI at LA Flight Academy",
         },
         {
-          name: `Dror Waissengrin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-dror-waissengrin-2.jpg",
-          imageAlt: "Dror Waissengrin, CFI-I at LA Flight Academy",
+          name: `Andre Dassin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-andre-dassin.jpg",
+          imageAlt: "Andre Dassin, CFI-I at LA Flight Academy",
         },
         {
           name: `Matthew Ronder-Seid<br><small class="text-white font-normal text-sm">CFI-I</small>`,
@@ -74,19 +74,19 @@ const crew = {
           imageAlt: "Jack Keshishian, CFI at LA Flight Academy",
         },
         {
-          name: `Chris Ghazarian<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-chris-ghazarian.jpg",
-          imageAlt: "Chris Ghazarian, CFI-I at LA Flight Academy",
-        },
-        {
-          name: `Andre Dassin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-andre-dassin.jpg",
-          imageAlt: "Andre Dassin, CFI-I at LA Flight Academy",
-        },
-        {
           name: `Mason Morrow<br><small class="text-white font-normal text-sm">CFI-I</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-mason-morrow.jpg",
           imageAlt: "Mason Morrow, CFI-I at LA Flight Academy",
+        },
+        {
+          name: `Dror Waissengrin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-dror-waissengrin-2.jpg",
+          imageAlt: "Dror Waissengrin, CFI-I at LA Flight Academy",
+        },
+        {
+          name: `Chris Ghazarian<br><small class="text-white font-normal text-sm">CFI-I</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-chris-ghazarian.jpg",
+          imageAlt: "Chris Ghazarian, CFI-I at LA Flight Academy",
         },
         {
           name: `Jade Jung<br><small class="text-white font-normal text-sm">CFI-I</small>`,
@@ -94,7 +94,7 @@ const crew = {
           imageAlt: "Jade Jung, CFI-I at LA Flight Academy",
         },
         {
-          name: `Nipun Nair<br><small class="text-white font-normal text-sm">CFI</small>`,
+          name: `Nipun Nair<br><small class="text-white font-normal text-sm">CFI-I</small>`,
           imagePath: "/src/assets/profile-silhouette.png",
           imageAlt: "Nipun Nair, CFI-I at LA Flight Academy",
         },
