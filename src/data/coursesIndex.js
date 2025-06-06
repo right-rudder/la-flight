@@ -10,7 +10,7 @@ const coursesIndex = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/lafa-pilot-programs-index-cover.jpg",
+      imagePath: "/src/assets/lafa-pilot-programs-index-cover-Edited.jpg",
       imageAlt:
         "Photograph of an LA Flight Academy plane flying over mountains",
       headerH1: `Pilot <br>PROGRAMS</span>`,

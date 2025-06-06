@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
+import { Image } from "astro:assets";
 
 const data = {
   header: {
@@ -94,6 +95,7 @@ const posts = (await getCollection("blog")).sort(
               <img
                 src={post.data.heroImage}
                 alt={post.data.title}
+                loading="lazy"
                 class="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-110 group-hover:brightness-125 duration-200"
               />
               <div class="absolute inset-0 -z-10 bg-gradient-to-t from-muted-950 via-primary-900/20 group-hover:bg-primary-950/60 duration-200" />
