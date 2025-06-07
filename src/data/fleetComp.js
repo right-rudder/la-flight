@@ -10,7 +10,8 @@ const fleetCompData = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
+      imagePath:
+        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
       imageAlt: "Three LA Flight Academy aircraft on the patio",
       headerH1: `Our <br><span>FLEET</span>`,
       paragraph: `Our aircraft and simulator are carefully selected and professionally maintained to support every stage of your flight training journey. From Piper Warriors and Cessna 172s to a Cirrus SR20 GTS, Beechcraft multi-engine, and our FAA-approved Gleim BATD simulator, LA Flight Academy offers the tools and technology to help you train efficiently and safely.`,
@@ -35,6 +36,7 @@ const fleetCompData = {
       images: [
         "/src/assets/Cirrus-219EL-fleet-pic.jpg",
         "/src/assets/Cirrus_interior.jpg",
+        "/src/assets/Cirrus-219EL-(1-of-1)-10.jpg",
         "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
       ],
       details: [
@@ -98,12 +100,10 @@ const fleetCompData = {
       rates: "($175hr/$165 block)",
       description:
         "This aircraft is ideal for Private Pilot, Commercial, CFI and Spin Training.",
-      images: [
-        "/src/assets/N76015_new.jpg",
-      ],
+      images: ["/src/assets/N76015_new.jpg"],
       details: [
         "1976 Cessna 172N",
-        "160hp Carbureted",
+        "160hp Carburetted",
         "Dual VOR’s and Comm’s",
         "IFR Certified",
         "Garmin 750 Touchpad GPS w/Bluetooth Flightstream",
@@ -117,12 +117,10 @@ const fleetCompData = {
       rates: "($185HR/$175 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      images: [
-        "/src/assets/N42982-piper-archer.webp",
-      ],
+      images: ["/src/assets/N42982-piper-archer.webp"],
       details: [
         "1983 Piper Archer II",
-        "180hp Carbureted",
+        "180hp Carburetted",
         "Garmin 650 and Garmin 355 GPS with Dual G5s",
         "3 Axis Autopilot",
         "Technically Advanced Aircraft",
@@ -137,12 +135,10 @@ const fleetCompData = {
       rates: "($175hr/$165 block)",
       description:
         "This Piper Archer II PA28-181 is a four seat, 180HP, low wing aircraft that is ideal for Private Pilot, Instrument, Commercial and CFI Training.",
-      images: [
-        "/src/assets/N7901C_new.jpg",
-      ],
+      images: ["/src/assets/N7901C_new.jpg"],
       details: [
         "1975 Piper Archer II PA28-181",
-        "180hp Carbureted",
+        "180hp Carburetted",
         "Garmin 430 GPS",
         "Dual VOR’s and Comm’s",
         "IFR Certified",
@@ -156,9 +152,7 @@ const fleetCompData = {
       rates: "($175HR/$165 block)",
       description:
         "This Piper Archer II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
-      images: [
-        "/src/assets/N4313F_new.jpg",
-      ],
+      images: ["/src/assets/N4313F_new.jpg"],
       details: [
         "1978 Piper Archer II PA28-181",
         "180hp — Piston-Single",
@@ -175,9 +169,7 @@ const fleetCompData = {
       rates: "($165HR/$155 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      images: [
-        "/src/assets/N8156R_new.jpg",
-      ],
+      images: ["/src/assets/N8156R_new.jpg"],
       details: [
         "1979 Piper Warrior II PA28-161",
         "160hp — Piston-Single",
