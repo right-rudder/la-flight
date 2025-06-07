@@ -15,17 +15,19 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
   <div class="lg:w-1/2 w-full h-64 lg:h-full relative">
     <div class="swiper fleet-swiper h-full">
       <div class="swiper-wrapper h-full">
-        {images.map((imgPath) => (
-          <div class="swiper-slide h-full">
-            <Image
-              src={allImages[imgPath]()}
-              alt={`${name} photo`}
-              widths={[540, 720, 1080, 1440]}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              class="w-full h-full object-cover"
-            />
-          </div>
-        ))}
+        {
+          images.map((imgPath) => (
+            <div class="swiper-slide h-full">
+              <Image
+                src={allImages[imgPath]()}
+                alt={`${name} photo`}
+                widths={[720, 1080, 1440]}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        }
       </div>
       <!-- Arrows inside image -->
       <div class="swiper-button-prev"></div>
@@ -34,7 +36,9 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
   </div>
 
   <!-- Details -->
-  <div class="lg:w-1/2 w-full flex flex-col justify-center p-6 h-auto lg:h-full">
+  <div
+    class="lg:w-1/2 w-full flex flex-col justify-center p-6 h-auto lg:h-full"
+  >
     <h3 class="text-4xl font-serif font-semibold text-gray-800">{name}</h3>
     <p class="text-gray-500 text-sm mb-4">{rates}</p>
     <ul class="list-disc list-inside space-y-2">
