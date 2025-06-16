@@ -11,7 +11,7 @@ const advancedTrainings = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/lafa-advanced-training.jpg",
+      imagePath: "/src/assets/lafa-flight-training.jpg",
       imageAlt:
         "Pilot undergoing advanced flight training in a complex aircraft",
       headerH1: `Advanced <br>Training</span>`,
@@ -80,7 +80,7 @@ const advancedTrainings = {
             "Master spin awareness, recovery, and prevention techniques. Spin training is essential for CFIs and a valuable skill for all pilots seeking to handle emergency situations with confidence.",
             "This program emphasizes safety and control, equipping you with critical knowledge to prevent accidents and respond effectively under pressure.",
           ],
-          imagePath: "/src/assets/lafa-plane-over-mountains.jpg",
+          imagePath: "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
           imageAlt:
             "Instructor demonstrating spin recovery techniques to a pilot",
         },
