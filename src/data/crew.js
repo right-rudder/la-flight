@@ -84,11 +84,6 @@ const crew = {
           imageAlt: "Dror Waissengrin, CFI-I at LA Flight Academy",
         },
         {
-          name: `Chris Ghazarian<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-chris-ghazarian.jpg",
-          imageAlt: "Chris Ghazarian, CFI-I at LA Flight Academy",
-        },
-        {
           name: `Jade Jung<br><small class="text-white font-normal text-sm">CFI-I</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-jade-jung.jpg",
           imageAlt: "Jade Jung, CFI-I at LA Flight Academy",

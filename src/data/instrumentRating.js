@@ -7,11 +7,13 @@ const instrumentRating = {
       "Take your pilot skills to the next level with LA Flight Academy’s Instrument Rating Course. Learn to fly confidently in challenging weather and low-visibility conditions while enhancing your navigation skills.",
     pageKeywords:
       "Instrument Rating , IFR training Van Nuys, advanced pilot training, learn to fly in low visibility, instrument flight rules, instrument pilot certification",
+    
+    simulator: true,
 
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.png",
+      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
       imageAlt:
         "LA Flight Academy student learning IFR flying in a Cessna cockpit",
       headerH1: `Instrument <br>Rating </span>`,
@@ -78,7 +80,7 @@ const instrumentRating = {
             "The FAA requires at least one IFR cross-country flight of 250 nautical miles, demonstrating your ability to plan and execute a flight using instrument navigation. At LA Flight Academy, we’ll help you prepare for this critical milestone, ensuring you feel confident in your planning and decision-making abilities.",
             "This phase of training will test your ability to communicate with air traffic control, handle in-flight adjustments, and manage complex navigation challenges.",
           ],
-          imagePath: "/src/assets/lafa-plane-over-mountains.jpg",
+          imagePath: "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
           imageAlt: "Aircraft cockpit during a cross-country IFR flight",
         },
         {

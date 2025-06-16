@@ -8,6 +8,8 @@ const privatePilotCourse = {
     pageKeywords:
       "Private Pilot Course, PPL training Los Angeles, learn to fly California, flight school Van Nuys, private pilot license, pilot training for beginners, Los Angeles flight lessons, Southern California flight school, best PPL training LA",
 
+    simulator: true,
+    
     // Top Header
     header: {
       stars: true,
