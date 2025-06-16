@@ -35,7 +35,7 @@ const fleetCompData = {
         "This 200hp Technically Advanced Aircraft (TAA) is ideal for Commercial, Instrument, and TAA time-building requirements.",
       images: [
         "/src/assets/Cirrus-219EL-fleet-pic.jpg",
-        "/src/assets/Cirrus_interior.jpg",
+        "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
         "/src/assets/Cirrus-219EL-(1-of-1)-10.jpg",
         "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
       ],
