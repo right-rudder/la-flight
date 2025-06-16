@@ -7,6 +7,8 @@ const instrumentRating = {
       "Take your pilot skills to the next level with LA Flight Academy’s Instrument Rating Course. Learn to fly confidently in challenging weather and low-visibility conditions while enhancing your navigation skills.",
     pageKeywords:
       "Instrument Rating , IFR training Van Nuys, advanced pilot training, learn to fly in low visibility, instrument flight rules, instrument pilot certification",
+    
+    simulator: true,
 
     // Top Header
     header: {
