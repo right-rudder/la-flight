@@ -377,7 +377,7 @@ const Navbar = ({ pathname }) => {
           </a>
 
           <div className="flex gap-3 mt-2 mb-16 text-white">
-            <a href={FACEBOOK_URL} target="_blank">
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
               <span className="sr-only">Facebook</span>
               <svg
                 className="size-6"
@@ -392,7 +392,7 @@ const Navbar = ({ pathname }) => {
                 />
               </svg>
             </a>
-            <a href={INSTAGRAM_URL} target="_blank">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               <span className="sr-only">Instagram</span>
               <svg
                 className="size-6"

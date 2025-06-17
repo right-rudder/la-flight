@@ -14,7 +14,7 @@ const programs = {
     },
     {
       title: "Instrument Rating",
-      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.png",
+      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
       imageAlt: "Close-up of LAFA aircraft instruments",
       description:
         "Enhance your skills and safely navigate through low-visibility conditions with our Instrument Rating course.",
@@ -51,6 +51,15 @@ const programs = {
       description:
         "Looking to specialize? Explore Spin Training, BFRs, IPCs, and more advanced programs to enhance your skills.",
       link: "/programs/advanced-trainings",
+    },
+    {
+      title: "Cirrus Training",
+      imagePath:
+        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
+      imageAlt: "LAFA Cirrus aircraft viewed from the front on the runway",
+      description:
+        "Train in our Cirrus SR20 GTS — a Technically Advanced Aircraft (TAA) perfect for Commercial, Instrument, and time-building. Fly with glass panel avionics and modern systems used in today's charter and corporate aircraft.",
+      link: "/programs/cirrus-training",
     },
   ],
 };
