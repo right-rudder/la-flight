@@ -41,6 +41,8 @@ const header = {
           src={CirrusFleet4}
           alt="Cirrus SR20 GTS at LA Flight Academy"
           class="shadow-md w-full h-72 object-cover"
+          widths={[240, 540, 720, 1080, 1440, 1980]}
+          sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
         />
         <div>
           <h1 class="text-4xl font-bold text-primary-700 mb-4">
@@ -168,7 +170,7 @@ const header = {
   <!-- Image Swiper Gallery -->
   <section class="bg-white py-12 px-6">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold text-primary-700 mb-6">Gallery</h2>
+      <h2 class="text-2xl font-bold text-primary-700 mb-6 text-center">Gallery</h2>
 
       <div class="swiper fleet-swiper h-[16rem] md:h-[48rem] relative">
         <div class="swiper-wrapper h-full">
