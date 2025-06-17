@@ -40,6 +40,10 @@ export const navbarLinks = [
         name: "Advanced Training",
         link: "/programs/advanced-trainings",
       },
+      {
+        name: "Cirrus Training",
+        link: "/programs/cirrus-training",
+      },
     ],
   },
   // {
