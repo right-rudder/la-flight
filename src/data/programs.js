@@ -14,7 +14,7 @@ const programs = {
     },
     {
       title: "Instrument Rating",
-      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.png",
+      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
       imageAlt: "Close-up of LAFA aircraft instruments",
       description:
         "Enhance your skills and safely navigate through low-visibility conditions with our Instrument Rating course.",
