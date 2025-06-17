@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
       992: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       576: {
         slidesPerView: 1,
@@ -49,9 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // NEW: One Swiper per Fleet Card
   document.querySelectorAll(".fleet-swiper").forEach((el) => {
     new Swiper(el, {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       loop: true,
       slidesPerView: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       navigation: {
         nextEl: el.querySelector(".swiper-button-next"),
         prevEl: el.querySelector(".swiper-button-prev"),
