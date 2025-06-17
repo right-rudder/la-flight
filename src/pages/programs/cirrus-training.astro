@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import HeaderScreen from "../../components/HeaderScreen.astro";
+import HeaderLeft from "../../components/HeaderLeft.astro";
 import ImageComp from "../../components/ImageComp.astro";
 import { Image } from "astro:assets";
 import CirrusFleetPic from "../../assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-2.jpg";
@@ -15,7 +15,7 @@ const header = {
   stars: true,
   imagePath: "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-2.jpg",
   imageAlt: "Three LA Flight Academy aircraft on the patio",
-  headerH1: `Cirrus <br><span>Advanced Training</span>`,
+  headerH1: `Cirrus Advanced Training`,
   paragraph: `Fly the Cirrus SR20 GTS — a Technically Advanced Aircraft (TAA) equipped with modern glass avionics, dual GPS, and autopilot. Whether you're pursuing your instrument rating, commercial license, or building time, our Cirrus training prepares you for modern aircraft operations and airline-level proficiency.`,
   buttons: [
     {
@@ -31,7 +31,7 @@ const header = {
   siteTitle="Cirrus Training | LA Flight Academy"
   siteDescription="Train in LA Flight Academy’s 200hp Technically Advanced Aircraft (TAA) Cirrus SR20. Ideal for Instrument, Commercial, and time-building."
 >
-  <HeaderScreen content={header} />
+  <HeaderLeft content={header} />
 
   <section class="bg-white py-12 px-6">
     <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
@@ -172,7 +172,7 @@ const header = {
     <div class="max-w-6xl mx-auto">
       <h2 class="text-2xl font-bold text-primary-700 mb-6 text-center">Gallery</h2>
 
-      <div class="swiper fleet-swiper h-[16rem] md:h-[48rem] relative">
+      <div class="swiper creativeSwiper h-[16rem] md:h-[48rem] relative">
         <div class="swiper-wrapper h-full">
           {
             cirrusImages.map((imgAsset) => (
