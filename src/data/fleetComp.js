@@ -103,7 +103,7 @@ const fleetCompData = {
       images: ["/src/assets/N76015_new.jpg"],
       details: [
         "1976 Cessna 172N",
-        "160hp Carburetted",
+        "160hp Carbureted",
         "Dual VOR’s and Comm’s",
         "IFR Certified",
         "Garmin 750 Touchpad GPS w/Bluetooth Flightstream",
@@ -120,7 +120,7 @@ const fleetCompData = {
       images: ["/src/assets/N42982-piper-archer.webp"],
       details: [
         "1983 Piper Archer II",
-        "180hp Carburetted",
+        "180hp Carbureted",
         "Garmin 650 and Garmin 355 GPS with Dual G5s",
         "3 Axis Autopilot",
         "Technically Advanced Aircraft",
@@ -138,7 +138,7 @@ const fleetCompData = {
       images: ["/src/assets/N7901C_new.jpg"],
       details: [
         "1975 Piper Archer II PA28-181",
-        "180hp Carburetted",
+        "180hp Carbureted",
         "Garmin 430 GPS",
         "Dual VOR’s and Comm’s",
         "IFR Certified",
