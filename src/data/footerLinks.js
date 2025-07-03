@@ -23,6 +23,10 @@ export const footerLinks = [
         link: "/contact-us",
       },
       {
+        name: "Location & Hours",
+        link: "/location",
+      },
+      {
         name: "Quiz",
         link: "/quiz",
       },

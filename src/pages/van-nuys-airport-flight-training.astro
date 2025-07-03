@@ -1,0 +1,456 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTAColor from "../components/CTAColor.astro";
+import SEOMetadata from "../components/SEOMetadata.astro";
+
+const seoData = {
+  pageTitle:
+    "Van Nuys Airport Flight Training VNY | Why Choose LA Flight Academy",
+  pageDescription:
+    "Discover why Van Nuys Airport (VNY) is the premier choice for flight training in Los Angeles. LA Flight Academy leverages VNY's advantages - world's busiest general aviation airport, ideal weather, and strategic location serving the greater LA area.",
+  pageKeywords:
+    "Van Nuys Airport flight training, VNY flight school, Van Nuys Airport advantages, busiest general aviation airport, Los Angeles flight training location, Van Nuys Airport weather, VNY pilot training benefits",
+  ogImage: "/gallery/la-flight-academy-van-nuys-airport-fleet.jpg",
+};
+
+const heroData = {
+  imagePathDesktop: "/src/assets/lafa-aircraft-fleet-van-nuys-hangar.jpg",
+  imagePathMobile: "/src/assets/lafa-aircraft-fleet-van-nuys-hangar.jpg",
+  imageAlt: "LA Flight Academy aircraft fleet at Van Nuys Airport hangar",
+  heading: "Van Nuys Airport",
+  subheading: "World's Premier General Aviation Hub",
+  paragraph:
+    "Train at the heart of Los Angeles aviation. Van Nuys Airport (VNY) provides the perfect environment for flight training with year-round flying weather, diverse airspace, and unmatched aviation resources.",
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "LA Flight Academy",
+  description:
+    "Professional flight training school at Van Nuys Airport offering comprehensive pilot certification programs.",
+  url: "https://www.laflightacademy.com",
+  telephone: "(747) 277-4232",
+  email: "fly@laflightacademy.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "7900 Balboa Blvd., Unit G6",
+    addressLocality: "Van Nuys",
+    addressRegion: "CA",
+    postalCode: "91406",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 34.2098,
+    longitude: -118.489,
+  },
+  areaServed: [
+    "Van Nuys",
+    "Los Angeles",
+    "Burbank",
+    "Glendale",
+    "Sherman Oaks",
+    "Studio City",
+    "Encino",
+  ],
+};
+---
+
+<BaseLayout
+  siteTitle={seoData.pageTitle}
+  siteDescription={seoData.pageDescription}
+  keywords={seoData.pageKeywords}
+>
+  <SEOMetadata
+    title={seoData.pageTitle}
+    description={seoData.pageDescription}
+    keywords={seoData.pageKeywords}
+    ogImage={seoData.ogImage}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(localBusinessSchema)}
+  />
+
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="relative bg-gradient-to-r from-primary-900 to-primary-700 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+              {heroData.heading}
+              <span class="block text-2xl lg:text-4xl text-accent-400 mt-2">
+                {heroData.subheading}
+              </span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+              {heroData.paragraph}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/enroll-now"
+                class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300 text-center"
+              >
+                Start Training at VNY
+              </a>
+              <a
+                href="/discovery-flight"
+                class="border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 text-center"
+              >
+                Discovery Flight
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src={heroData.imagePathDesktop}
+              alt={heroData.imageAlt}
+              class="rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Van Nuys Airport Advantages -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Why Train at Van Nuys Airport?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Van Nuys Airport (VNY) is the world's busiest general aviation
+            airport, providing unparalleled training opportunities in the heart
+            of Los Angeles.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              World's Busiest GA Airport
+            </h3>
+            <p class="text-gray-600">
+              Train at the most active general aviation airport globally, with
+              over 230,000 operations annually. Experience real-world aviation
+              traffic and communication from day one.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Perfect Flying Weather
+            </h3>
+            <p class="text-gray-600">
+              Los Angeles enjoys 300+ days of VFR weather annually. Train
+              consistently year-round without weather delays common in other
+              regions.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Strategic Location
+            </h3>
+            <p class="text-gray-600">
+              Centrally located in the San Fernando Valley, easily accessible
+              from all Los Angeles areas including Burbank, Glendale, Sherman
+              Oaks, and Studio City.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Complex Airspace Training
+            </h3>
+            <p class="text-gray-600">
+              Master navigation in LA's diverse airspace including Class B, C,
+              and D airspace. Practice with LAX, Burbank, and Long Beach
+              airports nearby.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Aviation Industry Hub
+            </h3>
+            <p class="text-gray-600">
+              Van Nuys hosts major aviation companies, maintenance facilities,
+              and charter operations. Network with industry professionals and
+              explore career opportunities.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div
+              class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Safety & Infrastructure
+            </h3>
+            <p class="text-gray-600">
+              Modern facilities, excellent maintenance services, and
+              comprehensive support infrastructure. Van Nuys provides the safest
+              training environment in Southern California.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Areas -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Diverse Training Areas from Van Nuys
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Van Nuys Airport's location provides access to diverse training
+            environments within minutes of departure.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Practice Areas & Routes
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <span
+                  class="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <span class="text-white text-sm font-bold">1</span>
+                </span>
+                <div>
+                  <strong class="text-gray-900">Coastal Training:</strong>
+                  <span class="text-gray-600 ml-2">
+                    Santa Monica Bay, Malibu coastline, and Pacific Ocean
+                    practice areas
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span
+                  class="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <span class="text-white text-sm font-bold">2</span>
+                </span>
+                <div>
+                  <strong class="text-gray-900">Mountain Flying:</strong>
+                  <span class="text-gray-600 ml-2">
+                    San Gabriel Mountains, high-altitude training, and mountain
+                    airport practice
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span
+                  class="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <span class="text-white text-sm font-bold">3</span>
+                </span>
+                <div>
+                  <strong class="text-gray-900">Desert Practice:</strong>
+                  <span class="text-gray-600 ml-2">
+                    Antelope Valley, Mojave Desert, and wide-open airspace for
+                    maneuvers
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span
+                  class="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center mr-3 mt-0.5"
+                >
+                  <span class="text-white text-sm font-bold">4</span>
+                </span>
+                <div>
+                  <strong class="text-gray-900">Urban Navigation:</strong>
+                  <span class="text-gray-600 ml-2">
+                    Los Angeles basin, landmark navigation, and complex airspace
+                    training
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="/gallery/la-flight-academy-los-angeles-flight-school-cessna-172s-being-pulled-from-hangar.jpg"
+              alt="LA Flight Academy aircraft being prepared for training flight at Van Nuys Airport"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Airport Facts -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Van Nuys Airport by the Numbers
+          </h2>
+          <p class="text-xl text-gray-600">
+            Facts that make VNY the premier choice for flight training
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">230,000+</div>
+            <div class="text-gray-600">Annual Operations</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">300+</div>
+            <div class="text-gray-600">VFR Days/Year</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">4</div>
+            <div class="text-gray-600">Runways</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary-600 mb-2">24/7</div>
+            <div class="text-gray-600">Operations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTAColor
+      content={{
+        imagePath: "/src/assets/LAFA-CTA-bg.webp",
+        imageAlt: "LA Flight Academy hangar at Van Nuys Airport",
+        headerH1:
+          "<span class='text-primary-800'>Ready to Train</br></span>at Van Nuys?",
+        paragraph:
+          "Join hundreds of successful pilots who chose Van Nuys Airport for their flight training. Experience the advantages of training at the world's busiest general aviation airport.",
+        buttons: [
+          {
+            name: "Start Your Training",
+            link: "/enroll-now",
+            primary: true,
+          },
+          {
+            name: "Schedule Discovery Flight",
+            link: "/discovery-flight",
+            primary: false,
+          },
+        ],
+      }}
+    />
+  </main>
+</BaseLayout>

@@ -39,6 +39,17 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+
+<!-- DNS prefetch for social media -->
+<link rel="dns-prefetch" href="https://www.facebook.com" />
+<link rel="dns-prefetch" href="https://www.instagram.com" />
+<link rel="dns-prefetch" href="https://www.yelp.com" />
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
@@ -63,6 +74,16 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+<meta name="author" content="LA Flight Academy" />
+<meta name="language" content="en-US" />
+<meta name="geo.region" content="US-CA" />
+<meta name="geo.placename" content="Van Nuys, California" />
+<meta name="geo.position" content="34.2012;-118.4901" />
+<meta name="ICBM" content="34.2012, -118.4901" />
+<meta name="geo.airport" content="Van Nuys Airport (VNY)" />
+<meta name="location" content="Van Nuys Airport, Los Angeles, California" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -70,15 +91,98 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+<meta property="og:site_name" content="LA Flight Academy" />
+<meta property="og:locale" content="en_US" />
+<meta property="fb:app_id" content="" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:site" content="@laflightacademy" />
+<meta name="twitter:creator" content="@laflightacademy" />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Structured Data for Flight School -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "LA Flight Academy",
+    "alternateName": "LAFA",
+    "url": "https://laflightacademy.com",
+    "logo": "https://laflightacademy.com/LA-Flight-Academy-logo-blue.png",
+    "image": "https://laflightacademy.com/LA-Flight-Academy-logo-blue.png",
+    "description": "Professional flight training school at Van Nuys Airport offering pilot certification programs from Private Pilot to Commercial licenses.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7900 Balboa Blvd., Unit G6",
+      "addressLocality": "Van Nuys",
+      "addressRegion": "CA",
+      "postalCode": "91406",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.2012,
+      "longitude": -118.4901
+    },
+    "telephone": "(747) 277-4232",
+    "email": "fly@laflightacademy.com",
+    "sameAs": [
+      "https://www.facebook.com/p/LA-Flight-Academy-100064073860589/",
+      "https://www.instagram.com/laflightacademy/",
+      "https://www.yelp.com/biz/la-flight-academy-los-angeles"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Flight Training Programs",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Private Pilot License (PPL)",
+            "description": "Complete private pilot training program"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Instrument Rating (IR)",
+            "description": "Advanced instrument flight training"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Course",
+            "name": "Commercial Pilot License (CPL)",
+            "description": "Professional pilot certification program"
+          }
+        }
+      ]
+    },
+    "areaServed": [
+      "Los Angeles",
+      "Van Nuys",
+      "Burbank",
+      "Santa Monica",
+      "Glendale",
+      "Pasadena",
+      "Beverly Hills",
+      "California"
+    ]
+  }
+</script>
 
 <!-- UPDATE GTAG PLEASE -->
 <!-- Google tag (gtag.js) -->

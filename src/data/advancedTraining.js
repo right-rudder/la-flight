@@ -2,11 +2,12 @@ const advancedTrainings = {
   data: {
     slug: "advanced-trainings",
     // SEO Header Stuff
-    pageTitle: "ADVANCED FLIGHT TRAINING | LA Flight Academy",
+    pageTitle:
+      "Advanced Flight Training Van Nuys | Multi-Engine & Complex Aircraft Los Angeles",
     pageDescription:
-      "Enhance your aviation expertise with advanced flight training at LA Flight Academy. Gain proficiency in complex, high-performance, multi-engine, spin training, and more.",
+      "Master advanced aviation skills at Van Nuys Airport with LA Flight Academy. Multi-engine rating, complex aircraft training, high-performance endorsements, and spin training serving Los Angeles area pilots. Accelerated programs available at VNY.",
     pageKeywords:
-      "Advanced flight training, complex aircraft training, multi-engine rating, high-performance training, spin training, advanced pilot certifications",
+      "advanced flight training Van Nuys, multi-engine rating Los Angeles, complex aircraft training VNY, high-performance endorsement Van Nuys, spin training Los Angeles, advanced pilot certification California, multi-engine accelerated Van Nuys",
 
     // Top Header
     header: {
@@ -52,8 +53,7 @@ const advancedTrainings = {
             "Hands-on sessions focus on systems management, emergency procedures, and efficient performance in a variety of scenarios.",
           ],
           imagePath: "/src/assets/LAFA-CTA-bg.webp",
-          imageAlt:
-            "Pilot training on an aircraft with retractable gear",
+          imageAlt: "Pilot training on an aircraft with retractable gear",
         },
         {
           title: "High-Performance Aircraft Training",
@@ -80,7 +80,8 @@ const advancedTrainings = {
             "Master spin awareness, recovery, and prevention techniques. Spin training is essential for CFIs and a valuable skill for all pilots seeking to handle emergency situations with confidence.",
             "This program emphasizes safety and control, equipping you with critical knowledge to prevent accidents and respond effectively under pressure.",
           ],
-          imagePath: "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
+          imagePath:
+            "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
           imageAlt:
             "Instructor demonstrating spin recovery techniques to a pilot",
         },

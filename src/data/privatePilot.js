@@ -2,14 +2,15 @@ const privatePilotCourse = {
   data: {
     slug: "private-pilot-course",
     // SEO Header Stuff
-    pageTitle: "PRIVATE PILOT COURSE | LA Flight Academy",
+    pageTitle:
+      "Private Pilot Training Van Nuys | PPL License Los Angeles | LA Flight Academy",
     pageDescription:
-      "Start your aviation journey in Los Angeles with LA Flight Academy's comprehensive Private Pilot Course. Located at Van Nuys Airport, our experienced instructors provide personalized training with a modern fleet to help you earn your PPL efficiently and confidently. Ideal for aspiring pilots in Southern California.",
+      "Earn your Private Pilot License (PPL) at Van Nuys Airport with LA Flight Academy. Our comprehensive private pilot training serves Los Angeles, Burbank, Glendale, and surrounding areas. Modern fleet, experienced CFIs, and flexible scheduling at VNY. Start your aviation journey today!",
     pageKeywords:
-      "Private Pilot Course, PPL training Los Angeles, learn to fly California, flight school Van Nuys, private pilot license, pilot training for beginners, Los Angeles flight lessons, Southern California flight school, best PPL training LA",
+      "private pilot training Van Nuys, PPL license Los Angeles, private pilot course VNY, Van Nuys flight school, learn to fly Los Angeles, private pilot license California, flight training Van Nuys Airport, PPL training LA, pilot lessons Van Nuys, aviation training Los Angeles",
 
     simulator: true,
-    
+
     // Top Header
     header: {
       stars: true,
@@ -87,7 +88,8 @@ const privatePilotCourse = {
           paragraphs: [
             "Prepare for cross-country and night flying with structured lessons designed to build confidence and proficiency. Navigate to unfamiliar airports, communicate with ATC, and operate safely in low-visibility conditions.",
           ],
-          imagePath: "/src/assets/lafa-plane-cessna-172s-flying-over-california-9.jpg",
+          imagePath:
+            "/src/assets/lafa-plane-cessna-172s-flying-over-california-9.jpg",
           imageAlt:
             "LA Flight Academy aircraft on a cross-country training flight",
         },

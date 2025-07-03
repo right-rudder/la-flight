@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
+import SEOArticle from "../components/SEOArticle.astro";
 import { KEYWORDS } from "../consts";
 import CTAColor from "../components/CTAColor.astro";
 import flyWithUsCTA from "../data/CTAFlight";
@@ -18,22 +19,59 @@ const {
   category,
   tags,
   keywords,
+  readingTime,
 } = Astro.props;
 
-// BlogPosting schema
+// Enhanced BlogPosting schema with more details
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: title,
   description: description,
-  image: heroImage,
-  author: author,
+  image: {
+    "@type": "ImageObject",
+    url: heroImage,
+    width: 1200,
+    height: 630,
+  },
+  author: {
+    "@type": "Person",
+    name: author,
+    affiliation: {
+      "@type": "Organization",
+      name: "LA Flight Academy",
+    },
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "LA Flight Academy",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://laflightacademy.com/LA-Flight-Academy-logo-blue.png",
+      width: 300,
+      height: 100,
+    },
+  },
   datePublished: pubDate,
   dateModified: updatedDate || pubDate,
-  mainEntityOfPage: Astro.url.href,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": Astro.url.href,
+  },
+  articleSection: category,
+  keywords: tags.join(", "),
+  wordCount: readingTime ? readingTime * 200 : null,
+  timeRequired: readingTime ? `PT${readingTime}M` : null,
+  inLanguage: "en-US",
+  isAccessibleForFree: true,
+  about: {
+    "@type": "Thing",
+    name: "Flight Training",
+    description: "Professional aviation training and pilot education",
+  },
 };
 
-// BreadcrumbList schema
+// Enhanced BreadcrumbList schema
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -42,19 +80,31 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: Astro.site,
+      item: {
+        "@type": "WebPage",
+        "@id": Astro.site?.toString(),
+        name: "Home",
+      },
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: new URL("/blog", Astro.site).href,
+      item: {
+        "@type": "WebPage",
+        "@id": new URL("/blog", Astro.site).href,
+        name: "Aviation Blog",
+      },
     },
     {
       "@type": "ListItem",
       position: 3,
       name: title,
-      item: Astro.url.href,
+      item: {
+        "@type": "WebPage",
+        "@id": Astro.url.href,
+        name: title,
+      },
     },
   ],
 };
@@ -62,10 +112,28 @@ const breadcrumbSchema = {
 
 <BaseLayout
   siteTitle={title + " | Blog | LA Flight Academy"}
-  siteDescription={description + " LA Flight Academy Blog."}
-  keywords={category + ", " + tags.join(", ") + keywords ? keywords : KEYWORDS}
+  siteDescription={description +
+    " Read more aviation tips and flight training insights on the LA Flight Academy blog."}
+  keywords={category +
+    ", " +
+    tags.join(", ") +
+    (keywords ? ", " + keywords : ", " + KEYWORDS)}
   ogImage={heroImage}
 >
+  <!-- Enhanced SEO for articles -->
+  <SEOArticle
+    title={title}
+    description={description}
+    author={author}
+    publishDate={pubDate}
+    modifiedDate={updatedDate}
+    image={heroImage}
+    url={Astro.url.href}
+    category={category}
+    tags={tags}
+    readingTime={readingTime}
+  />
+
   <script
     type="application/ld+json"
     set:html={JSON.stringify(breadcrumbSchema)}

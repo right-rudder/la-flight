@@ -1,0 +1,61 @@
+---
+// PerformanceOptimizer.astro - Critical performance and SEO optimizations
+const { preloadImages = [], criticalCSS = false } = Astro.props;
+---
+
+<!-- Resource Hints for Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+
+<!-- DNS Prefetch for External Resources -->
+<link rel="dns-prefetch" href="https://www.facebook.com" />
+<link rel="dns-prefetch" href="https://www.instagram.com" />
+<link rel="dns-prefetch" href="https://www.yelp.com" />
+<link rel="dns-prefetch" href="https://maps.google.com" />
+
+<!-- Preload Critical Images -->
+{
+  preloadImages.map((image) => (
+    <link
+      rel="preload"
+      as="image"
+      href={image.src}
+      type={image.type || "image/webp"}
+      media={image.media || "(max-width: 1920px)"}
+    />
+  ))
+}
+
+<!-- Critical CSS Inlining (if specified) -->
+{
+  criticalCSS && (
+    <style>
+      /* Critical above-the-fold CSS would go here */ /* This should be inline
+      CSS for critical rendering path */
+    </style>
+  )
+}
+
+<!-- Prefetch Important Pages -->
+<link rel="prefetch" href="/programs" />
+<link rel="prefetch" href="/discovery-flight" />
+<link rel="prefetch" href="/contact-us" />
+
+<!-- Additional Performance Hints -->
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- Favicon and App Icons for Better UX -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#005a9c" />
+
+<!-- Security Headers -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="DENY" />
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />

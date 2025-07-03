@@ -1,0 +1,288 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import {
+  COMPANY_NAME,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+} from "../consts";
+
+const pageData = {
+  pageTitle: "Van Nuys Flight School Location & Hours | LA Flight Academy",
+  pageDescription:
+    "Visit LA Flight Academy at Van Nuys Airport (VNY). Get directions, hours, contact info for Los Angeles' premier flight school. Located at 7900 Balboa Blvd, Unit G6, Van Nuys, CA 91406.",
+  pageKeywords:
+    "LA Flight Academy location, Van Nuys Airport flight school, VNY flight training, flight school hours, Van Nuys flight school directions, 7900 Balboa Blvd flight training, Los Angeles aviation school location",
+
+  header: {
+    imagePath:
+      "/src/assets/lafa-plane-beechcraft-twin-engine-inside-hangar.jpg",
+    imageAlt: "LA Flight Academy hangar at Van Nuys Airport",
+    headerH1: "Visit Our Flight School",
+    paragraph:
+      "Located at Van Nuys Airport, the heart of Los Angeles general aviation.",
+  },
+};
+
+// Local Business Schema with comprehensive details
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["FlightSchool", "LocalBusiness", "EducationalOrganization"],
+  name: COMPANY_NAME,
+  alternateName: "LAFA",
+  description:
+    "Professional flight training school offering Private Pilot, Instrument Rating, Commercial Pilot, and CFI certifications at Van Nuys Airport.",
+  url: "https://laflightacademy.com",
+  logo: "https://laflightacademy.com/LA-Flight-Academy-logo-blue.png",
+  image: "https://laflightacademy.com/LAFA-OG-image.png",
+  telephone: PHONE_NUMBER,
+  email: EMAIL_ADDRESS,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: ADDRESS_LINE_1,
+    addressLocality: "Van Nuys",
+    addressRegion: "CA",
+    postalCode: "91406",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 34.2012,
+    longitude: -118.4901,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+  priceRange: "$$$",
+  paymentAccepted: ["Cash", "Credit Card", "Financing"],
+  currenciesAccepted: "USD",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Los Angeles",
+      sameAs: "https://en.wikipedia.org/wiki/Los_Angeles",
+    },
+    {
+      "@type": "City",
+      name: "Van Nuys",
+    },
+    {
+      "@type": "City",
+      name: "Burbank",
+    },
+    {
+      "@type": "City",
+      name: "Glendale",
+    },
+    {
+      "@type": "City",
+      name: "Santa Monica",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Flight Training Programs",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Private Pilot License (PPL)",
+          description: "Complete private pilot training program",
+          provider: COMPANY_NAME,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Instrument Rating (IR)",
+          description: "Advanced instrument flight training",
+          provider: COMPANY_NAME,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Course",
+          name: "Commercial Pilot License (CPL)",
+          description: "Professional pilot certification",
+          provider: COMPANY_NAME,
+        },
+      },
+    ],
+  },
+  sameAs: [
+    "https://www.facebook.com/p/LA-Flight-Academy-100064073860589/",
+    "https://www.instagram.com/laflightacademy/",
+    "https://www.yelp.com/biz/la-flight-academy-los-angeles",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: PHONE_NUMBER,
+    contactType: "customer service",
+    areaServed: "US",
+    availableLanguage: "English",
+  },
+};
+---
+
+<BaseLayout
+  siteTitle={pageData.pageTitle}
+  siteDescription={pageData.pageDescription}
+  keywords={pageData.pageKeywords}
+>
+  <!-- Enhanced Local Business Schema -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(localBusinessSchema)}
+  />
+
+  <Header data={pageData.header} />
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Location Information -->
+        <div>
+          <h2 class="text-4xl font-bold text-primary-800 mb-6">Our Location</h2>
+          <div class="space-y-4 text-lg">
+            <div>
+              <h3 class="font-semibold text-primary-700">Address</h3>
+              <p class="text-gray-700">
+                {ADDRESS_LINE_1}<br />
+                {ADDRESS_LINE_2}
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-primary-700">Airport</h3>
+              <p class="text-gray-700">Van Nuys Airport (VNY)</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-primary-700">Phone</h3>
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                class="text-primary-600 hover:text-primary-800"
+              >
+                {PHONE_NUMBER}
+              </a>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-primary-700">Email</h3>
+              <a
+                href={`mailto:${EMAIL_ADDRESS}`}
+                class="text-primary-600 hover:text-primary-800"
+              >
+                {EMAIL_ADDRESS}
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">
+              Hours of Operation
+            </h3>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="font-medium">Monday - Friday</span>
+                  <span>8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Saturday</span>
+                  <span>8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Sunday</span>
+                  <span>8:00 AM - 5:00 PM</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mt-4">
+                *Flight training available 7 days a week by appointment
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embedded Map -->
+        <div>
+          <h2 class="text-4xl font-bold text-primary-800 mb-6">Find Us</h2>
+          <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.8234567890123!2d-118.4901!3d34.2012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7900+Balboa+Blvd%2C+Van+Nuys%2C+CA+91406!5e0!3m2!1sen!2sus!4v1234567890123"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="LA Flight Academy Location at Van Nuys Airport"
+              aria-label="Map showing LA Flight Academy location at Van Nuys Airport"
+            >
+            </iframe>
+          </div>
+
+          <!-- Directions -->
+          <div class="mt-6">
+            <h3 class="text-xl font-bold text-primary-800 mb-4">Directions</h3>
+            <div class="space-y-3 text-gray-700">
+              <p>
+                <strong>From Los Angeles:</strong> Take I-405 North to Sherman Way
+                exit. Head west to Balboa Blvd, then south to the airport.
+              </p>
+              <p>
+                <strong>From Burbank:</strong> Take I-5 South to SR-170 South, then
+                I-405 North to Sherman Way exit.
+              </p>
+              <p>
+                <strong>Parking:</strong> Free parking available on-site at our facility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Landmarks -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-primary-800 mb-8 text-center">
+        Serving Los Angeles Area
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <h3 class="font-bold text-primary-700">Van Nuys & Valley</h3>
+          <p class="text-gray-600">Sherman Oaks, Encino, Tarzana, Reseda</p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-primary-700">West Side</h3>
+          <p class="text-gray-600">
+            Santa Monica, Beverly Hills, West Hollywood
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="font-bold text-primary-700">East Valley</h3>
+          <p class="text-gray-600">Burbank, Glendale, Pasadena, Studio City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
