@@ -1,17 +1,17 @@
 // CHANGE Default title
 export const SITE_TITLE =
-  "LA Flight Academy | Van Nuys Flight School for Pilot Training";
+  "LA Flight Academy | Van Nuys Flight School VNY | Pilot Training Los Angeles";
 
 // CHANGE default meta description -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const SITE_DESCRIPTION =
-  "LA Flight Academy, located at Van Nuys Airport, offers personalized flight training with a well-maintained fleet. Whether you're pursuing aviation as a hobby or a career, our experienced instructors provide a safe, transparent, and enjoyable learning environment.  Explore our programs and fleet options today.";
+  "LA Flight Academy at Van Nuys Airport (VNY) offers premier flight training in Los Angeles. Modern fleet of Cessna, Piper, and Cirrus aircraft with experienced CFIs. Earn your Private Pilot License, Instrument Rating, Commercial Certificate, or CFI. Serving Van Nuys, Burbank, Glendale, and greater Los Angeles area.";
 
 //SEO tip -> keyword + city 1
 //Should have between 5-10 different localities to mix and match keywords
 //typical keywords = how to become a pilot, flight school near, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot
 // CHANGE default keywords -> should only be used in homepage technically, but is there for a fallback in case a page is missed
 export const KEYWORDS =
-  "LA Flight Academy, Van Nuys flight school, how to become a pilot, flight school near Los Angeles, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot, flight training, pilot training, aviation school in California, Cessna 172 training, discovery flights Van Nuys, pilot school near me, flight training in Los Angeles, Burbank, Santa Monica, Glendale, Pasadena, Beverly Hills";
+  "Van Nuys flight school, LA Flight Academy VNY, Van Nuys Airport flight training, Los Angeles pilot training, flight school near me, Van Nuys Airport VNY, private pilot license PPL Van Nuys, discovery flights Los Angeles, instrument rating IR training, commercial pilot license CPL, certified flight instructor CFI, how to become a pilot Los Angeles, flight training California, pilot school Van Nuys, aviation training Los Angeles, Cessna 172 training, Piper Archer training, Cirrus SR20 training, flight instruction Van Nuys, Burbank flight training, Glendale pilot school, Santa Monica aviation, Sherman Oaks flight lessons, Studio City pilot training, Encino flight school";
 
 export const OG_IMAGE = "/LAFA-OG-image.png";
 
