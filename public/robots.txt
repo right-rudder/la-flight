@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /search?*
+Disallow: /*?*print
+Disallow: /*?*pdf
+
+# Crawl-delay for specific bots
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
+
+# Allow Google to crawl important file types
+User-agent: Googlebot
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
 
 Sitemap: https://laflightacademy.com/sitemap-index.xml

@@ -18,7 +18,6 @@ import CTAQuiz from "../components/CTAQuiz.astro";
 import CTAQuizData from "../data/CTAQuiz";
 import GeneralFAQs from "../components/GeneralFAQs";
 
-
 const blogfeed = {
   upperHeading: "Our Blog",
   heading: "LA Flight Academy News",
@@ -39,15 +38,15 @@ const { data } = homePage;
 ---
 
 <BaseLayout
-  siteTitle={"#1 California Flight School Los Angeles Van Nuys | LA Flight Academy"}
-  siteDescription={"Looking for a top-tier California Flight School? LA Flight Academy in Van Nuys offers expert flight training with a highly experienced team and a well-maintained fleet. Whether you're starting with a Private Pilot License or advancing to Multi-Engine training, our California Flight School in Los Angeles Van Nuys provides personalized instruction to help you succeed."}
-  keywords={"California Flight School, California Flight School Los Angeles Van Nuys, Van Nuys flight training, flight school in Van Nuys, pilot training in California, Los Angeles flight academy, multi-engine training California, private pilot training Van Nuys, commercial pilot training Los Angeles"}
+  siteTitle={"Premier California Flight School Van Nuys Airport | Los Angeles Pilot Training | LA Flight Academy"}
+  siteDescription={"LA Flight Academy at Van Nuys Airport (VNY) is California's premier flight school serving Los Angeles. Expert pilot training from Private Pilot to Commercial licenses with modern aircraft fleet, experienced CFIs, and accelerated programs. Leading California flight school in the heart of LA aviation."}
+  keywords={"California flight school Van Nuys, Los Angeles pilot training, Van Nuys Airport VNY flight school, California aviation training, premier flight school Los Angeles, pilot training California, Van Nuys flight training, California flight academy, Los Angeles area flight school, Van Nuys Airport pilot training"}
 >
   <HomeHeader />
   <Welcome content={welcome} />
   <GridPrograms content={programs} />
   <CTAQuiz content={CTAQuizData} />
-  <FleetComp content={fleetCompData}/>
+  <FleetComp content={fleetCompData} />
   <section class="my-14">
     <div class="max-w-7xl mx-auto flex justify-center">
       <GeneralFAQs client:visible />
