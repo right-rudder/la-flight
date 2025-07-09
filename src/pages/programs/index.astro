@@ -7,18 +7,35 @@ import CTAColor from "../../components/CTAColor.astro";
 import CTAFlight from "../../data/CTAFlight.js";
 
 import coursesIndex from "../../data/coursesIndex.js";
+import TrainingRoadmap from "../../components/TrainingRoadmap.astro";
+import programsRoadmap from "../../data/roadmap-programs";
+import Testimonials from "../../components/Testimonials.astro";
+import testimonialsData from "../../data/testimonialsData";
+import SofarCTA from "../../components/sofarCTA.astro";
+import GeneralFAQs from "../../components/GeneralFAQs";
+import ContactUs from "../../components/ContactUs.astro";
 
 const { data } = coursesIndex;
-
 ---
+
 <BaseLayout
   siteTitle={data.pageTitle}
   siteDescription={data.pageDescription}
   keywords={data.pageKeywords}
-  >
-  
-  <HeaderScreen content = {data.header} />
-  <GridPrograms content={programs} />
-  <CTAColor content={CTAFlight} />
-</BaseLayout>
+>
+  <HeaderScreen content={data.header} />
+  <TrainingRoadmap content={programsRoadmap} />
 
+  <Testimonials content={testimonialsData} />
+  <CTAColor content={CTAFlight} />
+  <SofarCTA />
+
+  <GridPrograms content={programs} />
+  <section class="my-14">
+    <div class="max-w-7xl mx-auto flex justify-center">
+      <GeneralFAQs client:visible />
+    </div>
+  </section>
+  <!-- Contact Us Form -->
+  <ContactUs />
+</BaseLayout>

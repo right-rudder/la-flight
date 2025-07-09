@@ -12,9 +12,9 @@ const { content } = Astro.props;
     <div class="w-full lg:mx-0 text-center mb-16">
       {
         content.upperHeading && (
-          <h3 class="mx-auto mt-12 uppercase text-lg lg:text-xl font-sans font-bold tracking-tight text-primary-500">
+          <p class="mx-auto mt-12 uppercase text-lg lg:text-xl font-sans font-bold tracking-tight text-primary-500">
             {content.upperHeading}
-          </h3>
+          </p>
         )
       }
       {
@@ -70,12 +70,25 @@ const { content } = Astro.props;
                     </h3>
                   )}
 
-                  {step.paragraphs.map((par) => (
-                    <p
-                      class="text-lg mb-3 font-sans2 text-gray-800"
-                      set:html={par}
-                    />
-                  ))}
+                  {step.paragraphs &&
+                    step.paragraphs.map((par) => (
+                      <p
+                        class="text-lg/6 mb-3 font-sans2 text-gray-800"
+                        set:html={par}
+                      />
+                    ))}
+
+                  {step.lists &&
+                    step.lists.map((list) => (
+                      <ul class="list-none mb-8">
+                        <h4 class="text-xl font-semibold mb-2">{list.title}</h4>
+                        {list.items.map((item) => (
+                          <li class="text-sm/4 font-sans2 mb-2 text-gray-800 hover:text-primary-600 hover:font-semibold hover:scale-105 duration-200">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
                 </div>
               </div>
               <div
