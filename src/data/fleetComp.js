@@ -80,8 +80,8 @@ const fleetCompData = {
         "This 180HP fuel injected four seat aircraft is ideal for Instrument, Commercial and CFI training. Manufactured in 1999.",
       images: [
         "/src/assets/N252SP_new.jpg",
-        "/src/assets/lafa-plane-cessna-172s-flying-over-california-2.jpg",
-        "/src/assets/lafa-plane-cessna-172s-flying-over-california-5.jpg",
+        "/src/assets/lafa-plane-cessna-172s-under-blue-skies.jpg",
+        "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
       ],
       details: [
         "1999 Cessna 172S",
@@ -119,7 +119,7 @@ const fleetCompData = {
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
       images: ["/src/assets/N42982-piper-archer.webp"],
       details: [
-        "1983 Piper Archer II",
+        "1983 Piper Archer II PA28-181",
         "180hp Carbureted",
         "Garmin 650 and Garmin 355 GPS with Dual G5s",
         "3 Axis Autopilot",

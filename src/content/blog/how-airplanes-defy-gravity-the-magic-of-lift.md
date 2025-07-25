@@ -3,7 +3,7 @@ pubDate: "February 19, 2025"
 author: Alex Feldman
 title: "How Airplanes Defy Gravity: The Magic of Lift"
 description: "Discover the science behind how airplanes fly! Learn about lift, Bernoulli's principle, wing design, angle of attack, and flaps, and understand how these elements defy gravity."
-heroImage: "/blog/lafa-plane-up-in-the-sky.jpg"
+heroImage: "/blog/lafa-plane-piper-cherokee-taking-off.jpg"
 readingTime: 4
 category: "Pilot Resources"
 tags:

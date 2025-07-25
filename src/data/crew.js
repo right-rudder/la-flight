@@ -49,14 +49,14 @@ const crew = {
       membersTitle: "Our Instructors",
       members: [
         {
-          name: `Alex Feldman<br><small class="text-white font-normal text-sm">Chief Pilot, CFI-I, MEI</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
-          imageAlt: "Alex Feldman, Chief Pilot, CFI-I, and MEI of LA Flight Academy",
+          name: `Cameron Diamond<br><small class="text-white font-normal text-sm">Chief Pilot, CFI-I, MEI</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-cameron-diamond.jpg",
+          imageAlt: "Cameron Diamond, Chief Pilot, CFI-I, MEI at LA Flight Academy",
         },
         {
-          name: `Cameron Diamond<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI-I, MEI</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-cameron-diamond.jpg",
-          imageAlt: "Cameron Diamond, Asst Chief Pilot, CFI-I, MEI at LA Flight Academy",
+          name: `Alex Feldman<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI-I, MEI</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
+          imageAlt: "Alex Feldman, Asst Chief Pilot, CFI-I, and MEI of LA Flight Academy",
         },
         {
           name: `Andre Dassin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
