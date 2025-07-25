@@ -3,7 +3,7 @@ pubDate: "July 25, 2025"
 author: Alex Feldman
 title: "The Future Pilots: How AI is Changing Career Paths in Aviation"
 description: "How AI is transforming the aviation industry and shaping the future of pilot training and career development."
-heroImage: "/public/blog/future-pilots.jpg"
+heroImage: "/blog/future-pilots.jpg"
 readingTime: 4
 category: "Pilot Resources"
 tags:
