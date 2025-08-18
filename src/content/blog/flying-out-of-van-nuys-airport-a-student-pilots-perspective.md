@@ -1,12 +1,13 @@
 ---
+pubDate: "August 15, 2025"
 title: "Flying Out of Van Nuys Airport: A Student Pilot’s Perspective"
 author: Alex Feldman
 description: "Discover what it’s like to fly out of Van Nuys Airport as a student pilot, including the challenges, safety measures, and unique learning experiences."
+heroImage: "/blog/lafa-plane-over-mountains.jpg"
 category: "Flight Training"
 tags:
   ["Van Nuys Airport", "Student Pilot", "Flight Training", "Pilot Experience"]
 readingTime: 6
-pubDate: "2025-08-18"
 ---
 
 # Flying Out of Van Nuys Airport: A Student Pilot’s Perspective
