@@ -51,23 +51,25 @@ const crew = {
         {
           name: `Cameron Diamond<br><small class="text-white font-normal text-sm">Chief Pilot, CFI-I, MEI</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-cameron-diamond.jpg",
-          imageAlt: "Cameron Diamond, Chief Pilot, CFI-I, MEI at LA Flight Academy",
+          imageAlt:
+            "Cameron Diamond, Chief Pilot, CFI-I, MEI at LA Flight Academy",
         },
         {
           name: `Alex Feldman<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI-I, MEI</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
-          imageAlt: "Alex Feldman, Asst Chief Pilot, CFI-I, and MEI of LA Flight Academy",
+          imageAlt:
+            "Alex Feldman, Asst Chief Pilot, CFI-I, and MEI of LA Flight Academy",
         },
         {
           name: `Andre Dassin<br><small class="text-white font-normal text-sm">CFI-I</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-andre-dassin.jpg",
           imageAlt: "Andre Dassin, CFI-I at LA Flight Academy",
         },
-        {
-          name: `Matthew Ronder-Seid<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-matthew-ronder-2.jpg",
-          imageAlt: "Matthew Ronder-Seid, CFI-I at LA Flight Academy",
-        },
+        // {
+        //   name: `Matthew Ronder-Seid<br><small class="text-white font-normal text-sm">CFI-I</small>`,
+        //   imagePath: "/src/assets/lafa-headshot-of-cfi-matthew-ronder-2.jpg",
+        //   imageAlt: "Matthew Ronder-Seid, CFI-I at LA Flight Academy",
+        // },
         {
           name: `Jack Keshishian<br><small class="text-white font-normal text-sm">CFI</small>`,
           imagePath: "/src/assets/lafa-headshot-of-cfi-jack-keshishian.jpg",
