@@ -1,0 +1,197 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import {
+  COMPANY_NAME,
+  SITE_DESCRIPTION,
+  COMPANY_NAME_CAPS,
+  COMPANY_NICKNAME,
+  PHONE_NUMBER,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  EMAIL_ADDRESS,
+} from "../../consts";
+import CTAColor from "../../components/CTAColor.astro";
+import HeaderScreen from "../../components/HeaderScreen.astro";
+import ProgramSwiper from "../../components/ProgramSwiper.astro";
+import TrainingRoadmap from "../../components/TrainingRoadmap.astro";
+import Roadmap from "../../data/roadmap-to-commercial-pilot";
+import programsSwiper from "../../data/programs";
+import flyWithUsCTA from "../../data/CTAFlight.js";
+
+export async function getStaticPaths() {
+  const locations = await getCollection("pilot-training");
+
+  return locations.map((entry) => {
+    const city = entry.data.city;
+    const state = entry.data.stateShort;
+    const customSlug = `${city}-${state}`.toLowerCase().replace(/\s+/g, "-");
+
+    return {
+      params: { slug: customSlug },
+      props: entry, // still pass full entry data
+    };
+  });
+}
+type Props = CollectionEntry<"pilot-training">;
+const location = Astro.props as Props;
+const locationCity = location.data.city || "your area";
+const locationStateShort = location.data.stateShort || "your state";
+const locationStateLong = location.data.stateLong || "your state";
+const locationDescription =
+  location.data.description ||
+  "A great place with unique attractions and a welcoming community.";
+const locationCounty =
+  location.data.baseLocation ||
+  "A well-known county with rich history and local charm.";
+const locationKeyPlace1 =
+  location.data.keyPlace1 || "A popular landmark worth visiting.";
+const locationKeyPlace2 =
+  location.data.keyPlace2 || "Another must-see location in the area.";
+
+function randomItem(arr: string[]) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+const headerImage = randomItem(location.data.headerImages || []);
+const randomRoadmapImageStep1 = randomItem(location.data.headerImages || []);
+const randomRoadmapImageStep7 = randomItem(location.data.headerImages || []);
+
+const rawHeadline = randomItem(location.data.headlines || []);
+const headerH1 = rawHeadline
+  .replace("{{city}}", locationCity)
+  .replace("{{stateShort}}", locationStateShort)
+  .replace("{{baseLocation}}", locationCounty);
+
+const data = {
+  //SEO Header Stuff
+  pageTitle: `${locationCity}, ${locationStateLong} Flight School for Pilot Training | ${COMPANY_NAME}`,
+  pageDescription: `Explore the top flight school near you, we're based near ${locationCity}, ${locationStateShort}. ${SITE_DESCRIPTION}`,
+  pageKeywords: `flight school ${locationCity} ${locationStateLong}, flight school ${locationCity} ${locationStateShort}, Private Pilot ${locationCity} ${locationStateLong}, Instrument Rating  ${locationCity} ${locationStateLong}, Commercial Pilot ${locationCity} ${locationStateLong}, Multi-Engine rating ${locationCity} ${locationStateLong}, Certified Flight Instructor ${locationCity} ${locationStateLong}, Sport Pilot ${locationCity} ${locationStateLong}, bachelor's in professional flight ${locationCity} ${locationStateLong}, bachelor's in aviation management ${locationCity} ${locationStateLong}, aircraft maintenance ${locationCity} ${locationStateLong}, discovery flight ${locationCity} ${locationStateLong}, intro flight ${locationCity} ${locationStateLong}, accelerated pilot training  ${locationCity} ${locationStateLong}, part time pilot training ${locationCity} ${locationStateLong}, ${COMPANY_NAME}, located at ${ADDRESS_LINE_1} ${ADDRESS_LINE_2}, ${PHONE_NUMBER}, ${COMPANY_NAME_CAPS}, ${COMPANY_NICKNAME}, ${EMAIL_ADDRESS}, how to become a pilot, flight school near, private pilot, discovery flight, introductory flight, instrument rating, commercial certificate, certified flight instructor, airline programs, how to become an airline pilot, flight school, pilot training, ${locationCity} flight school, personalized flight training, flexible flight programs, Private Pilot License training, Certified Flight Instructor (CFI) ${locationCity}, multi-engine training ${locationCity}, aviation school in ${locationStateLong}, Cessna 172 training, discovery flights ${locationCity}, pilot school near me, flight training with high pass rate, ${locationKeyPlace1}, ${locationKeyPlace2}, ${locationCounty}`,
+
+  //top header
+  header: {
+    stars: true,
+    imagePath: headerImage || "/src/assets/placeholder.webp",
+    imageAlt: `Flight school aircraft at ${locationCity}, ${locationStateShort}`,
+    headerH1:
+      headerH1 ||
+      `Train to become a pilot near ${locationCity}, ${locationStateShort}`,
+    paragraph: `USATS offers personalized pilot training in ${locationCity}, located in scenic ${locationStateLong}. ${locationDescription}`,
+    buttons: [
+      {
+        name: "Enroll Today",
+        link: "/enroll-now",
+        primary: false,
+      },
+      {
+        name: "Discovery Flight",
+        link: "/discovery-flight",
+        primary: false,
+      },
+    ],
+  },
+
+  roadmap: {
+    upperHeading: "Roadmap",
+    heading: `How to Become an Airline Pilot near ${locationCity}, ${locationStateShort}`,
+    descriptions: [
+      "Achieve your dream of becoming an airline pilot with LA Flight Academy. Here’s a step-by-step guide to starting your journey from earning your first certificate to landing a commercial airline job.",
+    ],
+    steps: [
+      {
+        title: `Earn a Private Pilot Certificate near ${locationCity}, ${locationStateShort}`,
+        link: "/programs/private-pilot-course",
+        paragraphs: [
+          "The journey to an airline career starts with earning your Private Pilot Certificate (PPL). This certification introduces you to aviation fundamentals, including aircraft operations, navigation, and communication with air traffic control. The PPL is your first step toward professional training and qualifies you to fly for personal or recreational purposes.",
+          "At LAFA, our PPL course combines flight training and ground instruction to build your confidence and foundational knowledge. This step provides the groundwork for all advanced ratings and certificates, ensuring you’re ready for the challenges ahead.",
+        ],
+        imagePath: randomRoadmapImageStep1,
+        imageAlt:
+          "LA Flight Academy student holding their private pilot certificate",
+      },
+      {
+        title: "Add an Instrument Rating",
+        link: "/programs/instrument-rating",
+        paragraphs: [
+          "The next milestone is earning an Instrument Rating (IR). This allows you to operate under Instrument Flight Rules (IFR), equipping you to fly in low visibility and adverse weather conditions by relying on instruments rather than visual cues. Instrument-rated pilots are skilled in navigation, situational awareness, and decision-making.",
+          "At LAFA, our training ensures precision in IFR operations and prepares you for scenarios that are standard in airline operations. An IR is essential for transitioning to commercial aviation roles.",
+        ],
+        imagePath: "/src/assets/LAFA-IR-cover.jpg",
+        imageAlt: "LA Flight Academy airplane flying under IFR conditions",
+      },
+      {
+        title: `Earn a Commercial Pilot Certificate near ${locationCity}, ${locationStateShort}`,
+        link: "/programs/commercial-pilot",
+        paragraphs: [
+          "With your Private Pilot Certificate and Instrument Rating completed, the next step is earning a Commercial Pilot Certificate (CPL). This certification raises your skill level to meet professional standards and allows you to be compensated for your flying services.",
+          "At LAFA, our CPL program emphasizes advanced maneuvers, complex aircraft operations, and professionalism in aviation. This certificate opens doors to roles in passenger transport, cargo, or other specialized aviation fields.",
+        ],
+        imagePath: "/src/assets/LAFA-CP-cover.jpg",
+        imageAlt:
+          "LA Flight Academy student during a commercial pilot training session",
+      },
+      {
+        title: `Earn a Flight Instructor Certificate near ${locationCity}, ${locationStateShort}`,
+        link: "/programs/certified-flight-instructor",
+        paragraphs: [
+          "Becoming a Certificated Flight Instructor (CFI) is a common step for aspiring airline pilots to build the necessary flight hours while earning an income. As a CFI, you’ll enhance your skills by teaching others, deepening your aviation knowledge and communication abilities.",
+          "At LAFA, we offer tailored CFI programs that prepare you to instruct with confidence and professionalism. This step immerses you in the aviation community and accelerates your progress toward your career goals.",
+        ],
+        imagePath: "/src/assets/LAFA-CFI-cover.jpg",
+        imageAlt: "LA Flight Academy instructor teaching a student pilot",
+      },
+      {
+        title: "Add a Multi-Engine Rating",
+        link: "/programs/multi-engine-rating",
+        paragraphs: [
+          "To advance in your career, a Multi-Engine Rating (ME) is essential. This rating qualifies you to fly aircraft with more than one engine, a requirement for most commercial airline roles. It also prepares you for handling complex scenarios, such as engine failures.",
+          "Our multi-engine training focuses on precision, safety, and operational excellence. Adding this rating is a key step toward airline readiness, as it enhances your credentials and broadens your career opportunities.",
+        ],
+        imagePath: "/src/assets/LAFA-ME-cover.jpg",
+        imageAlt: "LA Flight Academy multi-engine aircraft on the runway",
+      },
+      {
+        title: "Build Experience & Prepare for Airline Interviews",
+        paragraphs: [
+          "After obtaining the required certificates and ratings, it’s time to gain flight experience. Airlines typically require 1,500 hours of flight time for an Airline Transport Pilot (ATP) Certificate. Many pilots build hours through instructing, banner towing, or other commercial roles.",
+          "When you reach 500-1,500 hours, you can start interviewing with airlines. These interviews evaluate your technical knowledge and fit within the airline’s culture. Success at this stage leads to conditional job offers and formal training for your airline career.",
+        ],
+        imagePath: "/src/assets/tim-gouw-women-meeting-interview.jpg",
+        imageAlt: "LA Flight Academy graduate during an airline interview",
+      },
+      {
+        title: `Start Your Airline Career near ${locationCity}, ${locationStateShort}`,
+        paragraphs: [
+          "Once you meet the ATP requirements, you can begin your career as a First Officer at a regional airline. This role provides hands-on experience in the airline environment, preparing you for future advancement to larger aircraft and major airlines.",
+          "With continued training and experience, you’ll achieve your dream of flying for a commercial airline, paving the way for a rewarding aviation career.",
+        ],
+        imagePath: randomRoadmapImageStep7,
+        imageAlt: "Airline pilot cockpit view, preparing for flight",
+      },
+    ],
+    finalParagraph: `Ready to take the first step in your aviation journey near ${locationCity}, ${locationStateShort}? Enroll in LA Flight Academy’s Private Pilot Course today and begin your path to becoming an airline pilot.`,
+    finalButton: {
+      name: "Enroll Now",
+      link: "/enroll-now",
+      primary: true,
+    },
+  },
+};
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <!-- HEADER -->
+  <HeaderScreen content={data.header} />
+
+  <TrainingRoadmap content={data.roadmap} />
+
+  <ProgramSwiper content={programsSwiper} />
+  <CTAColor content={flyWithUsCTA} />
+  <script src="../../scripts/creativeSwiper.js"></script>
+</BaseLayout>
