@@ -113,41 +113,6 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N42982",
-      rates: "($185HR/$175 block)",
-      description:
-        "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      images: ["/src/assets/N42982-piper-archer.webp"],
-      details: [
-        "1983 Piper Archer II PA28-181",
-        "180hp Carbureted",
-        "Garmin 650 and Garmin 355 GPS with Dual G5s",
-        "3 Axis Autopilot",
-        "Technically Advanced Aircraft",
-        "IFR Equipped",
-        "Time-Building and Private Pilot Training",
-        "$185/hour (wet)",
-        "$175/hour 10 hour block (wet)",
-      ],
-    },
-    {
-      name: "N7901C",
-      rates: "($175hr/$165 block)",
-      description:
-        "This Piper Archer II PA28-181 is a four seat, 180HP, low wing aircraft that is ideal for Private Pilot, Instrument, Commercial and CFI Training.",
-      images: ["/src/assets/N7901C_new.jpg"],
-      details: [
-        "1975 Piper Archer II PA28-181",
-        "180hp Carbureted",
-        "Garmin 430 GPS",
-        "Dual VOR’s and Comm’s",
-        "IFR Certified",
-        "Ideal for Private Pilot, Instrument, Commercial and CFI Training",
-        "$175/hour (wet)",
-        "$165/hour 10 hour block (wet)",
-      ],
-    },
-    {
       name: "N4313F",
       rates: "($175HR/$165 block)",
       description:
