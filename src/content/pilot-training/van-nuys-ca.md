@@ -25,8 +25,8 @@ headerImages:
   - "/src/assets/LAFA-PP-cover.jpg"
 
 headlines:
-  - "Fly Near the Action in {{city}}, {{stateShort}}"
-  - "Your Pilot Journey Begins in {{city}}, {{stateShort}}"
+  - "Fly Near the Action near {{city}}, {{stateShort}}"
+  - "Your Pilot Journey Begins near {{city}}, {{stateShort}}"
   - "Close to the Skies of {{city}}, {{stateShort}}"
   - "Training Grounds of Southern {{stateShort}}"
   - "Take Off from {{baseLocation}}"
