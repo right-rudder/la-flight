@@ -69,7 +69,7 @@ const cfi = {
             "Flight training hones your ability to instruct while refining your own flying skills. You’ll practice teaching key maneuvers from the right seat, such as steep turns, stalls, emergency procedures, and landings.",
             "Our experienced instructors provide real-world insights and mentorship, helping you master the art of aviation education.",
           ],
-          imagePath: "/src/assets/LAFA-CP-cover.jpg",
+          imagePath: "/src/assets/lafa-flight-lesson.jpg",
           imageAlt: "CFI trainee practicing instructional techniques",
         },
         {
