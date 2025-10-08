@@ -6,11 +6,11 @@ import { TbPlaneTilt } from "react-icons/tb";
 const { content } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
+  "/src/assets/*.{jpeg,jpg,JPG,png,gif,webp}"
 );
 if (!images[content.imagePath]) {
   throw new Error(
-    `"${content.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+    `"${content.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,JPG,png,gif,webp}"`
   );
 }
 

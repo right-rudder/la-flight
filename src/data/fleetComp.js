@@ -96,6 +96,26 @@ const fleetCompData = {
       ],
     },
     {
+      name: "N430EP",
+      rates: "($180hr/$170 block)",
+      description:
+        "This 180HP four-seat Cessna 172R is well-equipped for advanced training and instrument practice. Manufactured in 1998, it features a Garmin 650 GPS and is IFR capable.",
+      images: [
+        "/src/assets/N430EP.JPG",
+        "/src/assets/N430EP-front.JPG",
+        "/src/assets/N430EP-dash.JPG",
+      ],
+      details: [
+        "1998 Cessna 172R",
+        "180hp Engine",
+        "Garmin 650 GPS",
+        "IFR Capable",
+        "Ideal for Instrument and Commercial Training",
+        "$180/hour (wet)",
+        "$170/hour 10 hour block (wet)",
+      ],
+    },
+    {
       name: "N76015",
       rates: "($175hr/$165 block)",
       description:
