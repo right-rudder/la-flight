@@ -16,7 +16,7 @@ const { data }: Props = Astro.props;
 
 // Dynamically import all images
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp,svg}"
+  "/src/assets/*.{jpeg,jpg,JPG,png,gif,webp,svg}"
 );
 
 const resolvedImages = await Promise.all(

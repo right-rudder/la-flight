@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 
 const { name, imagePath, imageAlt, rank, bio } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
+  "/src/assets/*.{jpeg,jpg,JPG,png,gif,webp}"
 );
 if (!images[imagePath])
   throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,JPG,png,gif,webp}"`
   );
 ---
 

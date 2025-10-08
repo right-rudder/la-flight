@@ -3,7 +3,7 @@ import {
 } from "/src/consts.ts";
 
 // Dynamically import all images from the folder
-const images = import.meta.glob("/public/gallery/*.{jpeg,jpg,png,gif,webp}", { eager: true });
+const images = import.meta.glob("/public/gallery/*.{jpeg,jpg,JPG,png,gif,webp}", { eager: true });
 
 const galleryData = {
   data: {

@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 const { name, images, rates, description, details } = Astro.props;
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
+  "/src/assets/*.{jpeg,jpg,JPG,png,gif,webp}"
 );
 ---
 
