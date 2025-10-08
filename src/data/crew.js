@@ -82,8 +82,23 @@ const crew = {
         },
         {
           name: `Nipun Nair<br><small class="text-white font-normal text-sm">CFI-I</small>`,
-          imagePath: "/src/assets/profile-silhouette.png",
+          imagePath: "/src/assets/la-flight-academy-los-angeles-flight-school-headshot-of-cfi-Nipun-Nair.JPG",
           imageAlt: "Nipun Nair, CFI-I at LA Flight Academy",
+        },
+        {
+          name: `Ben Kaplan<br><small class="text-white font-normal text-sm">CFI</small>`,
+          imagePath: "/src/assets/la-flight-academy-los-angeles-flight-school-headshot-of-cfi-Ben-Kaplan.JPG",
+          imageAlt: "Ben Kaplan, CFI at LA Flight Academy",
+        },
+        {
+          name: `Harout Arakelian<br><small class="text-white font-normal text-sm">CFI</small>`,
+          imagePath: "/src/assets/la-flight-academy-los-angeles-flight-school-headshot-of-cfi-Harout-Arakelian.JPG",
+          imageAlt: "Harout Arakelian, CFI at LA Flight Academy",
+        },
+        {
+          name: `Sean Haughey<br><small class="text-white font-normal text-sm">CFI</small>`,
+          imagePath: "/src/assets/la-flight-academy-los-angeles-flight-school-headshot-of-cfi-Sean-Haughey.JPG",
+          imageAlt: "Sean Haughey, CFI at LA Flight Academy",
         },
       ],
     },
