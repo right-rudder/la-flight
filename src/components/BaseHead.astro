@@ -1,19 +1,30 @@
 ---
 import "../styles/global.css";
-import { COMPANY_NAME, INSTAGRAM_URL, PHONE_NUMBER, OG_IMAGE } from "../consts";
+import { COMPANY_NAME, INSTAGRAM_URL, PHONE_NUMBER, OG_IMAGE as OG_IMAGE_CONST } from "../consts";
 
 interface Props {
   title: string;
   description: string;
   keywords: string;
-  image?: string;
+  image?: string; // optional per-page override
 }
 
-const site = Astro.site || "http://localhost:4321";
+// Always a full origin (no trailing slash)
+const site = (Astro.site?.href ?? "https://laflightacademy.com").replace(/\/$/, "");
 
-const canonicalURL = new URL(Astro.url.pathname, site);
+// Canonical must be absolute
+const canonicalURL = new URL(Astro.url.pathname + Astro.url.search, site).toString();
 
-const { title, description, keywords, image = OG_IMAGE } = Astro.props;
+// Prefer per-page image prop; fall back to const. Accept absolute or relative.
+const rawImage = Astro.props.image ?? OG_IMAGE_CONST;
+const isAbs = /^https?:\/\//i.test(rawImage);
+const ogImage = isAbs ? rawImage : new URL(rawImage, site).toString();
+
+// Optional cache-bust to force fresh previews in Google Chat/Slack, etc.
+// If you’re still seeing the old preview, re-share the page URL with ?v=20251110
+const ogImageVersioned = `${ogImage}?v=20251110`;
+
+const { title, description, keywords } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -87,23 +98,23 @@ const { title, description, keywords, image = OG_IMAGE } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={ogImageVersioned} />
+<meta property="og:image:secure_url" content={ogImageVersioned} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={title} />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:site_name" content="LA Flight Academy" />
 <meta property="og:locale" content="en_US" />
-<meta property="fb:app_id" content="" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content={Astro.url} />
+<meta name="twitter:url" content={canonicalURL} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:image" content={ogImageVersioned} />
 <meta name="twitter:image:alt" content={title} />
 <meta name="twitter:site" content="@laflightacademy" />
 <meta name="twitter:creator" content="@laflightacademy" />
