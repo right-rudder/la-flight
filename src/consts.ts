@@ -13,7 +13,7 @@ export const SITE_DESCRIPTION =
 export const KEYWORDS =
   "Van Nuys flight school, LA Flight Academy VNY, Van Nuys Airport flight training, Los Angeles pilot training, flight school near me, Van Nuys Airport VNY, private pilot license PPL Van Nuys, discovery flights Los Angeles, instrument rating IR training, commercial pilot license CPL, certified flight instructor CFI, how to become a pilot Los Angeles, flight training California, pilot school Van Nuys, aviation training Los Angeles, Cessna 172 training, Piper Archer training, Cirrus SR20 training, flight instruction Van Nuys, Burbank flight training, Glendale pilot school, Santa Monica aviation, Sherman Oaks flight lessons, Studio City pilot training, Encino flight school";
 
-export const OG_IMAGE = "/LAFA-OG-image.png";
+export const OG_IMAGE = "https://laflightacademy.com/LAFA-OG-image.png";
 
 // CHANGE client business info
 export const COMPANY_NAME = "LA Flight Academy";
