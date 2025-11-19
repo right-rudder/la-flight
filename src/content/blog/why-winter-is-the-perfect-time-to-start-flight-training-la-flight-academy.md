@@ -22,7 +22,7 @@ tags: [
 
 ## Smooth Skies, All Season Long
 
-While much of the country slows down during winter, Southern California’s flying conditions remain ideal. Mild temperatures and clear skies make it one of the best times to **begin flight training**—and LA Flight Academy takes full advantage of that.
+While much of the country slows down during winter, Southern California’s flying conditions remain ideal. Mild temperatures and clear skies make it one of the best times to **begin flight training**, and LA Flight Academy takes full advantage of that.
 
 At **Van Nuys Airport (VNY)**, students experience **over 300 flyable days per year**, allowing for consistent progress and minimal weather delays.
 
@@ -55,13 +55,13 @@ Winter training also gives you a **head start** on your aviation goals. Many stu
 
 ## Experience LA Flight Academy
 
-At LA Flight Academy, you’ll train with professional instructors, a modern aircraft fleet, and access to advanced simulators. Whether you’re aiming for a career or flying for fun, our programs are designed to help you reach your goals—efficiently and safely.
+At LA Flight Academy, you’ll train with professional instructors, a modern aircraft fleet, and access to advanced simulators. Whether you’re aiming for a career or flying for fun, our programs are designed to help you reach your goals, efficiently and safely.
 
 ---
 
 ## Take the First Step Today
 
-Don’t wait for summer skies—**they’re already here** in Southern California. Begin your flight training journey this winter and take advantage of LA’s unbeatable flying conditions.
+Don’t wait for summer skies, **they’re already here** in Southern California. Begin your flight training journey this winter and take advantage of LA’s unbeatable flying conditions.
 
 **[Schedule your Discovery Flight](/discovery-flight)** today and experience why LA Flight Academy is the premier choice for aspiring pilots in Los Angeles.
 
