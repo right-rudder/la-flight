@@ -1,5 +1,5 @@
 ---
-pubDate: "November 15, 2025"
+pubDate: "November 25, 2025"
 author: Alex Feldman
 title: "Why Winter Is the Perfect Time to Start Flight Training in Southern California"
 description: "With clear skies, mild temperatures, and steady conditions, winter is the ideal season to begin your pilot training journey at LA Flight Academy in Van Nuys."
