@@ -1,5 +1,5 @@
 ---
-pubDate: "November 25, 2025"
+pubDate: "November 19, 2025"
 author: Alex Feldman
 title: "Giving Thanks to Aviation: What We’re Grateful for This Year at LA Flight Academy"
 description: "This Thanksgiving, LA Flight Academy reflects on the people, partnerships, and progress that make our aviation community soar higher each year."
