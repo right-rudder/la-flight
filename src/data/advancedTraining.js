@@ -81,7 +81,7 @@ const advancedTrainings = {
             "This program emphasizes safety and control, equipping you with critical knowledge to prevent accidents and respond effectively under pressure.",
           ],
           imagePath:
-            "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
+            "/src/assets/fleet/fleet-N252SP-cessna-172S-flying-over-mountains-multi-engine-california.jpg",
           imageAlt:
             "Instructor demonstrating spin recovery techniques to a pilot",
         },

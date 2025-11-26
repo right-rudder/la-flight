@@ -13,7 +13,7 @@ const instrumentRating = {
     // Top Header
     header: {
       stars: true,
-      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
+      imagePath: "/src/assets/fleet/fleet-219EL-cirrus-cockpit-instrument-panel-side-view-lafa-flight-school-calabasas-ca.jpg",
       imageAlt:
         "LA Flight Academy student learning IFR flying in a Cessna cockpit",
       headerH1: `Instrument <br>Rating </span>`,
@@ -80,7 +80,7 @@ const instrumentRating = {
             "The FAA requires at least one IFR cross-country flight of 250 nautical miles, demonstrating your ability to plan and execute a flight using instrument navigation. At LA Flight Academy, we’ll help you prepare for this critical milestone, ensuring you feel confident in your planning and decision-making abilities.",
             "This phase of training will test your ability to communicate with air traffic control, handle in-flight adjustments, and manage complex navigation challenges.",
           ],
-          imagePath: "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
+          imagePath: "/src/assets/fleet/fleet-N252SP-cessna-172S-flying-over-mountains-multi-engine-california.jpg",
           imageAlt: "Aircraft cockpit during a cross-country IFR flight",
         },
         {

@@ -11,7 +11,7 @@ const fleetCompData = {
     header: {
       stars: true,
       imagePath:
-        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-front-view-open-doors-lafa-flight-training-california.jpg",
       imageAlt: "Three LA Flight Academy aircraft on the patio",
       headerH1: `Our <br><span>FLEET</span>`,
       paragraph: `Our aircraft and simulator are carefully selected and professionally maintained to support every stage of your flight training journey. From Piper Warriors and Cessna 172s to a Cirrus SR20 GTS, Beechcraft multi-engine, and our FAA-approved Gleim BATD simulator, LA Flight Academy offers the tools and technology to help you train efficiently and safely.`,
@@ -34,10 +34,12 @@ const fleetCompData = {
       description:
         "This 200hp Technically Advanced Aircraft (TAA) is ideal for Commercial, Instrument, and TAA time-building requirements.",
       images: [
-        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-2.jpg",
-        "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
-        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-7.jpg",
-        "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-side-view-open-doors-la-flight-pilot-training-van-nuys-ca.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-front-view-la-flight-pilot-training-calabasas-ca.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-cockpit-instrument-panel-side-view-lafa-flight-school-calabasas-ca.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-cockpit-instrument-panel-back-view-la-flight-school-burbank-ca.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-front-view-lafa-pilot-training-canoga-park-ca.jpg",
+        "/src/assets/fleet/fleet-219EL-cirrus-front-view-open-doors-lafa-flight-training-california.jpg",
       ],
       details: [
         "2007 Cirrus SR20 GTS",
@@ -57,9 +59,12 @@ const fleetCompData = {
       description:
         "This 260hp fuel Injected aircraft is ideal for Commercial Multi-Engine and MEI Training.",
       images: [
-        "/src/assets/N120B_new.jpg",
-        "/src/assets/lafa-inside-plane.jpg",
-        "/src/assets/LAFA-welcome-inside-plane.jpg",
+        "/src/assets/fleet/fleet-N120B-beechcraft-side-view-commercial-pilot-ensino-ca.jpg",
+        "/src/assets/fleet/fleet-N120B-beechcraft-cockpit-back-view-certified-flight-instructor-van-nuys-ca.jpg",
+        "/src/assets/fleet/fleet-N120B-beechcraft-cockpit-side-view-lafa-flight-training-burbank-ca.jpg",
+        "/src/assets/fleet/fleet-N120B-beechcraft-front-view-lafa-flight-training-canoga-park-ca.jpg",
+        "/src/assets/fleet/fleet-N120N-beechcraft-cockpit-pilots-back-view-lafa-flight-school-encino-ca.jpg",
+        "/src/assets/fleet/fleet-N120N-beechcraft-cockpit-pilots-back-view-lafa-private-pilot-lake-balboa-ca.jpg",
       ],
       details: [
         "1962 Beechcraft 95-A55 Twin Engine",
@@ -79,9 +84,13 @@ const fleetCompData = {
       description:
         "This 180HP fuel injected four seat aircraft is ideal for Instrument, Commercial and CFI training. Manufactured in 1999.",
       images: [
-        "/src/assets/N252SP_new.jpg",
-        "/src/assets/lafa-plane-cessna-172s-under-blue-skies.jpg",
-        "/src/assets/lafa-pilot-programs-index-cover-Edited-cropped.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-side-view-private-pilot-lake-balboa-ca.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-front-view-instrument-rating-van-nuys-ca.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-flying-over-mountains-multi-engine-california.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-cockpit-lafa-commercial-pilot-north-hills-ca.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-cockpit-lafa-instrument-rating-north-hollywood-ca.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-flying-over-city-certified-flight-instructor-panorama-city-ca.jpg",
+        "/src/assets/fleet/fleet-N252SP-cessna-172S-flying-over-city-beach-multi-engine-reseda-ca.jpg",
       ],
       details: [
         "1999 Cessna 172S",
@@ -96,14 +105,14 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N430EP",
+      name: "N430EP", /* TODO : Get more images */
       rates: "($180hr/$170 block)",
       description:
         "This 180HP four-seat Cessna 172R is well-equipped for advanced training and instrument practice. Manufactured in 1998, it features a Garmin 650 GPS and is IFR capable.",
       images: [
-        "/src/assets/N430EP.JPG",
-        "/src/assets/N430EP-front.JPG",
-        "/src/assets/N430EP-dash.JPG",
+        "/src/assets/fleet/fleet-N430EP-cessna-172R-lafa-instrument-rating-north-hills-ca.JPG",
+        "/src/assets/fleet/fleet-N430EP-cessna-172R-front-view-lafa-multi-engine-north-hollywood-ca.JPG",
+        "/src/assets/fleet/fleet-N430EP-cessna-172R-instrument-panel-lafa-certified-flight-instructor-panorama-city-ca.JPG",
       ],
       details: [
         "1998 Cessna 172R",
@@ -116,11 +125,14 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N76015",
+      name: "N76015", /* TODO : Get more images */
       rates: "($175hr/$165 block)",
       description:
         "This aircraft is ideal for Private Pilot, Commercial, CFI and Spin Training.",
-      images: ["/src/assets/N76015_new.jpg"],
+      images: [
+        "/src/assets/fleet/fleet-N76015-cessna-172N-side-view-lafa-flight-school-studio-city-ca.jpg",
+        "/src/assets/fleet/fleet-N76015-cessna-172N-cfi-checking-aircraft-discovery-flight-sherman-oaks-ca.jpg",
+      ],
       details: [
         "1976 Cessna 172N",
         "160hp Carbureted",
@@ -133,11 +145,17 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N4313F",
+      name: "N4313F", /* TODO : Get 1 additional picture */
       rates: "($175HR/$165 block)",
       description:
         "This Piper Archer II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
-      images: ["/src/assets/N4313F_new.jpg"],
+      images: [
+        "/src/assets/fleet/fleet-N4313F-piper-archer-II-side-view-lafa-discovery-flight-reseda-ca.jpg",
+        "/src/assets/fleet/fleet-N4313F-piper-archer-II-lafa-flight-training-van-nuys-ca.jpg",
+        "/src/assets/fleet/fleet-N4313F-piper-archer-II-lafa-flight-school-studio-city-ca.jpg",
+        "/src/assets/fleet/fleet-N4313F-piper-archer-II-lafa-pilot-training-tarzana-ca.jpg",
+        "/src/assets/fleet/fleet-N4313F-piper-archer-II-lafa-pilot-school-toluca-lake-ca.jpg",
+      ],
       details: [
         "1978 Piper Archer II PA28-181",
         "180hp — Piston-Single",
@@ -150,11 +168,15 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N8156R",
+      name: "N8156R", /* TODO : Get more images */
       rates: "($165HR/$155 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
-      images: ["/src/assets/N8156R_new.jpg"],
+      images: [
+        "/src/assets/fleet/fleet-N8156R-piper-warrior-II-side-view-lafa-flight-training-sherman-oaks-ca.jpg",
+        "/src/assets/fleet/fleet-N8156R-piper-warrior-II-lafa-private-pilot-winnetka-ca.jpg",
+        "/src/assets/fleet/fleet-N8156R-piper-warrior-II-lafa-commercial-pilot-woodland-hills-ca.jpg",
+      ],
       details: [
         "1979 Piper Warrior II PA28-161",
         "160hp — Piston-Single",
@@ -166,6 +188,7 @@ const fleetCompData = {
         "$155/hour 10 hour block (wet)",
       ],
     },
+    /* TODO : Add N7901C and N7901C? */
     {
       name: "Gleim BATD Simulator",
       rates: "($70hr/$60 block)",

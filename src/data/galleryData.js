@@ -17,7 +17,7 @@ const galleryData = {
     // Top Header
     header: {
       stars: false,
-      imagePath: "/src/assets/LAFA-welcome-inside-plane.jpg",
+      imagePath: "/src/assets/fleet/fleet-N120B-beechcraft-cockpit-side-view-lafa-flight-training-burbank-ca.jpg",
       imageAlt: "The inside of one of our planes",
       headerH1: `Gallery <br><span>Snapshots of LAFA</span>`,
       paragraph: `Step inside LA Flight Academy through our photo gallery. From well-maintained aircraft to moments of achievement and camaraderie, these snapshots capture the essence of our aviation community.`,
