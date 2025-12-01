@@ -56,7 +56,7 @@ const programsRoadmap = {
       paragraphs: [
         "At LAFA, our training ensures precision in IFR operations and prepares you for scenarios that are standard in airline operations. An IR is essential for transitioning to commercial aviation roles.",
       ],
-      imagePath: "/src/assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg",
+      imagePath: "/src/assets/fleet/fleet-219EL-cirrus-cockpit-instrument-panel-side-view-lafa-flight-school-calabasas-ca.jpg",
       imageAlt: "LA Flight Academy airplane flying under IFR conditions",
     },
     {

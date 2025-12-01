@@ -3,17 +3,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeaderLeft from "../../components/HeaderLeft.astro";
 import ImageComp from "../../components/ImageComp.astro";
 import { Image } from "astro:assets";
-import CirrusFleetPic from "../../assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-2.jpg";
-import CirrusFleet2 from "../../assets/LA-Flight-Academy-Fleet-Cirrus-219EL.jpg";
-import CirrusFleet3 from "../../assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-7.jpg";
-import CirrusFleet4 from "../../assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training.jpg";
+import CirrusFleetPic from "../../assets/fleet/fleet-219EL-cirrus-side-view-open-doors-la-flight-pilot-training-van-nuys-ca.jpg";
+import CirrusFleet2 from "../../assets/fleet/fleet-219EL-cirrus-cockpit-instrument-panel-side-view-lafa-flight-school-calabasas-ca.jpg";
+import CirrusFleet3 from "../../assets/fleet/fleet-219EL-cirrus-front-view-lafa-pilot-training-canoga-park-ca.jpg";
+import CirrusFleet4 from "../../assets/fleet/fleet-219EL-cirrus-front-view-open-doors-lafa-flight-training-california.jpg";
 import CirrusFleet5 from "../../assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-9.jpg";
 
 const cirrusImages = [CirrusFleetPic, CirrusFleet2, CirrusFleet3, CirrusFleet4, CirrusFleet5];
 
 const header = {
   stars: true,
-  imagePath: "/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-2.jpg",
+  imagePath: "/src/assets/fleet/fleet-219EL-cirrus-side-view-open-doors-la-flight-pilot-training-van-nuys-ca.jpg",
   imageAlt: "Three LA Flight Academy aircraft on the patio",
   headerH1: `Cirrus Advanced Training`,
   paragraph: `Fly the Cirrus SR20 GTS — a Technically Advanced Aircraft (TAA) equipped with modern glass avionics, dual GPS, and autopilot. Whether you're pursuing your instrument rating, commercial license, or building time, our Cirrus training prepares you for modern aircraft operations and airline-level proficiency.`,
@@ -144,7 +144,7 @@ const header = {
   <section class="relative py-16 px-6 text-center">
     <div class="absolute -z-30 inset-0" aria-hidden="true">
       <ImageComp
-        imagePath="/src/assets/la-flight-academy-cirrus-plane-fleet-van-nuys-flight-training-7.jpg"
+        imagePath="/src/assets/fleet/fleet-219EL-cirrus-front-view-lafa-pilot-training-canoga-park-ca.jpg"
         imageAlt="LA flight academy aircraft flying over Los Angeles, California"
         loading="eager"
         styles="absolute object-cover h-full w-full object-center -z-50"

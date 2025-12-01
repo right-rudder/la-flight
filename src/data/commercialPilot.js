@@ -69,7 +69,7 @@ const commercialPilot = {
             "As part of the CPL requirements, you’ll train in a complex aircraft equipped with retractable landing gear, a constant-speed propeller, and flaps. This training sharpens your skills in handling advanced systems and prepares you for the challenges of commercial aviation.",
             "Our fleet includes aircraft specifically designed to meet the FAA’s complex training requirements, giving you hands-on experience with systems used in professional operations.",
           ],
-          imagePath: "/src/assets/lafa-inside-plane.jpg",
+          imagePath: "/src/assets/fleet/fleet-N120B-beechcraft-cockpit-back-view-certified-flight-instructor-van-nuys-ca.jpg",
           imageAlt: "Pilot operating a complex aircraft cockpit",
         },
         {
