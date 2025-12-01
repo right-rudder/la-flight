@@ -105,7 +105,7 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N430EP", /* TODO : Get more images */
+      name: "N430EP",
       rates: "($180hr/$170 block)",
       description:
         "This 180HP four-seat Cessna 172R is well-equipped for advanced training and instrument practice. Manufactured in 1998, it features a Garmin 650 GPS and is IFR capable.",
@@ -125,12 +125,13 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N76015", /* TODO : Get more images */
+      name: "N76015",
       rates: "($175hr/$165 block)",
       description:
         "This aircraft is ideal for Private Pilot, Commercial, CFI and Spin Training.",
       images: [
         "/src/assets/fleet/fleet-N76015-cessna-172N-side-view-lafa-flight-school-studio-city-ca.jpg",
+        "/src/assets/fleet/fleet-N76015-cessna-172N-instrument-panel-lafa-flight-school-van-nuys-ca.jpg",
         "/src/assets/fleet/fleet-N76015-cessna-172N-cfi-checking-aircraft-discovery-flight-sherman-oaks-ca.jpg",
       ],
       details: [
@@ -145,7 +146,7 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N4313F", /* TODO : Get 1 additional picture */
+      name: "N4313F",
       rates: "($175HR/$165 block)",
       description:
         "This Piper Archer II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1978.",
@@ -168,7 +169,7 @@ const fleetCompData = {
       ],
     },
     {
-      name: "N8156R", /* TODO : Get more images */
+      name: "N8156R",
       rates: "($165HR/$155 block)",
       description:
         "This Piper Warrior II is a reliable and versatile piston-single aircraft, ideal for Private Pilot and Time-Building training. Manufactured in 1979.",
@@ -188,7 +189,6 @@ const fleetCompData = {
         "$155/hour 10 hour block (wet)",
       ],
     },
-    /* TODO : Add N7901C and N7901C? */
     {
       name: "Gleim BATD Simulator",
       rates: "($70hr/$60 block)",
