@@ -132,7 +132,6 @@ const fleetCompData = {
       images: [
         "/src/assets/fleet/fleet-N76015-cessna-172N-side-view-lafa-flight-school-studio-city-ca.jpg",
         "/src/assets/fleet/fleet-N76015-cessna-172N-instrument-panel-lafa-flight-school-van-nuys-ca.jpg",
-        "/src/assets/fleet/fleet-N76015-cessna-172N-cfi-checking-aircraft-discovery-flight-sherman-oaks-ca.jpg",
       ],
       details: [
         "1976 Cessna 172N",
