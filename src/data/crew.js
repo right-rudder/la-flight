@@ -55,15 +55,15 @@ const crew = {
             "Cameron Diamond, Chief Pilot, CFI-I, MEI at LA Flight Academy",
         },
         {
-          name: `Alex Feldman<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI-I, MEI</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
-          imageAlt:
-            "Alex Feldman, Asst Chief Pilot, CFI-I, and MEI of LA Flight Academy",
+          name: `Jack Keshishian<br><small class="text-white font-normal text-sm">Asst Chief Pilot, CFI</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-jack-keshishian.jpg",
+          imageAlt: "Jack Keshishian, Asst Chief Pilot and CFI at LA Flight Academy",
         },
         {
-          name: `Jack Keshishian<br><small class="text-white font-normal text-sm">CFI</small>`,
-          imagePath: "/src/assets/lafa-headshot-of-cfi-jack-keshishian.jpg",
-          imageAlt: "Jack Keshishian, CFI at LA Flight Academy",
+          name: `Alex Feldman<br><small class="text-white font-normal text-sm">CFI-I, MEI</small>`,
+          imagePath: "/src/assets/lafa-headshot-of-cfi-alex-feldman.jpg",
+          imageAlt:
+            "Alex Feldman, CFI-I, and MEI of LA Flight Academy",
         },
         {
           name: `Mason Morrow<br><small class="text-white font-normal text-sm">CFI-I</small>`,
